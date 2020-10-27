@@ -49,7 +49,7 @@ function OpenPopup(){
 }
 /***********Memory functions***********/
 function MemorySave(){
-	memory.push(' '+document.getElementById('ans').innerText)
+	memory.push(' '+document.getElementById('ans').innerText);
 }
 function MemoryRecall(){
 	document.getElementById('ans').innerText=memory;
@@ -223,6 +223,7 @@ function Run(){
 		Ask()
 	}
 }
+console.log(login());
 //Check Local Storage
 function login(){
 	//Get data
@@ -233,7 +234,7 @@ function login(){
 		//Name
 		var name=prompt('Please enter your name', '');
 		if (name==null || name==''){
-			var name = '[None]';
+			var name='[None]';
 		}
 		localStorage.setItem('name', name);
 		//Username
@@ -255,13 +256,19 @@ function login(){
 		var passwordQ=prompt('Please enter your password', '');
 		if (usernameQ==username && passwordQ==UserPassword){
 			//Get name
-			var name = localStorage.getItem('name');
+			var name=localStorage.getItem('name');
 			//Greeting
 			alert('Welcome back '+name+'!');
 		}else{
-			alert('Incorrect!');
-			var wn = location.href='about:blank';
-			wn.document.write('The used login info was incorrect.');
+			alert('The used login info was not valid!');
+			var resetInfo=confirm('Do you want to reset your login info?');
+			if (resetInfo){
+				localStorage.clear();
+				alert('Please choose another username and password you will remember');
+				login();
+			}else{
+				location='about:blank';
+			}
 		}
 	}
 }
