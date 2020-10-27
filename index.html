@@ -7,11 +7,22 @@
 <!--CSS JavaScript Noscript-->
 <link rel='stylesheet' type='text/CSS' href='style.css'>
 <script src='script.js'></script>
+<script src='loginScript.js'></script>
 <noscript>JavaScript is disabled! Many functions will not operate without JavaScript. Please make sure that you enable JavaScript for full functions.</noscript>
 </head>
-<body id='Body'>
+<body id='Body' onload='login()'>
 <!--BODY-->
-<table id='table' onload='login()'>
+<div id='header' style='text-align:left;'>
+	<a href='index.html' style='float:left;'><h2>Stuff</h2></a>
+	<a href='index-table_editable.html' style='float:right;'><h3>Editable table</h3></a>	
+</div>
+<br>
+<br>
+<hr style='clear:both;'>
+<br>
+<br>
+<div id='content'>
+<table id='table'>
 <!--TABLE-->
 	<tr>
 		<th></th>
