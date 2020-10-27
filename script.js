@@ -267,7 +267,7 @@ function login(){
 				alert('Please choose another username and password you will remember');
 				login();
 			}else{
-				location='about:blank';
+				login();
 			}
 		}
 	}
