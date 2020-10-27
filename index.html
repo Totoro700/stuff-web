@@ -103,8 +103,9 @@
 	<hr>
 	<div id='MathDiv'>
 		<!--MATH-->
-		<h3>Math</h3>
+		<h2>Math</h2>
 		<hr>
+		<div id='MainMathDiv'>
 		<input id='numOne'>
 		<select id='select'>
 			<option value='p'>+</option>
@@ -128,8 +129,9 @@
 		<input id='numTwo'>
 		<p id='ans'></p>
 		<button id='CalculateMath' onclick='math()'>Calculate</button>
+		</div>
 		<hr>
-		<div id='Memory'>
+		<div id='MemoryDiv'>
 			<h5>Memory</h5>
 			<hr>
 			<button onclick='MemorySave()' class='Memory'>Memory Save (MS)</button>
@@ -137,18 +139,20 @@
 			<button onclick='MemoryClear()' class='Memory'>Memory Clear (MC)</button>
 			<hr>
 		</div>
-		<h5>Other functions</h5>
-		<hr>
-		<button onclick='Pi()' class='MathBtn'>Pi</button>
-		<p id='piAns'></p>
-		<hr>
-		<button onclick='Rad()' class='MathBtn'>Radian(Rad)</button>
-		<p id='radAns'></p>
-		<hr>
-		<button onclick='Deg()' class='MathBtn'>Degree(Deg)</button>
-		<p id='degAns'></p>
-		<hr>
-		<button onclick='MathClear()' class='MathBtn'>Clear</button>
+		<div id='OtherFuncDiv'>
+			<h5>Other functions</h5>
+			<hr>
+			<button onclick='Pi()' class='MathBtn'>Pi</button>
+			<p id='piAns'></p>
+			<hr>
+			<button onclick='Rad()' class='MathBtn'>Radian(Rad)</button>
+			<p id='radAns'></p>
+			<hr>
+			<button onclick='Deg()' class='MathBtn'>Degree(Deg)</button>
+			<p id='degAns'></p>
+			<hr>
+			<button onclick='MathClear()' class='MathBtn'>Clear</button>
+		</div>
 	</div>
 	<hr>
 	<div id='ACP'>
