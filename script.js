@@ -224,6 +224,10 @@ function Run(){
 		Ask()
 	}
 }
+function setup(){
+	login();
+	Center();
+}
 //Check Local Storage
 function login(){
 	//Get data
