@@ -4,13 +4,15 @@ th,td {padding:10px; text-align:center;}
 h1 {color:#707070;}
 h5 {color:green;}
 button {background-color:#FFF;}
-body {background-color:#CCCCCC;font-family:ink free;padding:5px;}
+body {background-color:#CCC;font-family:ink free;padding:5px;}
 div {margin:5px;}
 /********** Classes **********/
 .ButtonDefault {color:#0000FF;}
 .Memory {padding:2px;margin:5px;border:3px solid blue;background-color:#FFF;}
 .MathBtn {padding:2px;margin:5px;border:3px solid green;}
 .Alignment {padding:2px;margin:5px;border:3px solid blue;}
+.darkMode {background-color:#000;font-family:ink free;padding:5px;color:#FFF;}
+.whiteMode {background-color:#CCC;font-family:ink free;padding:5px;}
 /********** Ids **********/
 #content {border:2.5px solid black;padding:10px;}
 /* Google & Microsoft */
