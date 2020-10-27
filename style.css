@@ -1,10 +1,10 @@
 /********** Html elements **********/
-table,th,td {border:3px solid blue;margin-left:auto;margin-right:auto;}
+table,th,td {border:5px solid blue;margin-left:auto;margin-right:auto;border-collapse:collapse;}
 th,td {padding:10px; text-align:center;}
 h1 {color:#707070;}
 h5 {color:green;}
 button {background-color:#FFF;}
-body {background-color:#CCCCCC;font-family:ink free;padding:5px;border:5px solid black;text-align:center;}
+body {background-color:#CCCCCC;font-family:ink free;padding:5px;}
 div {margin:5px;}
 /********** Classes **********/
 .ButtonDefault {color:#0000FF;}
@@ -12,6 +12,7 @@ div {margin:5px;}
 .MathBtn {padding:2px;margin:5px;border:3px solid green;}
 .Alignment {padding:2px;margin:5px;border:3px solid blue;}
 /********** Ids **********/
+#content {border:2.5px solid black;padding:10px;}
 /* Google & Microsoft */
 #ButtonGoogle {color:#FF0000;}
 #ButtonMicrosoft {color:navy;}
