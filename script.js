@@ -293,5 +293,8 @@ function ReqInfo(){
 function ShowStats(){
 	var lang = window.navigator.language;
 	var syst = window.navigator.platform;
-	alert(' Stats: \n Language: '+lang+' \n Platform: '+syst+' \n Cookies enabled: '+window.navigator.cookieEnabled+' \n Online: '+window.navigator.onLine+' \n Vendor: '+window.navigator.vendor);
+	alert(' Stats: \n Language: '+lang+' \n Platform: '+syst+' \n Cookies enabled: '+window.navigator.cookieEnabled+' \n Online: '+window.navigator.onLine+' \n Vendor: '+window.navigator.vendor+' \n User Agent: '+window.navigator.userAgent);
+}
+function toggleDM(){
+	document.body.classList.toggle('darkMode');
 }
