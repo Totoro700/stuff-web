@@ -250,7 +250,6 @@ function login(){
 		}
 		localStorage.setItem('password', pass);
 		alert('This page uses some local storage, if you want to clear or reset it, scroll down to the end of the page and click "Clear Data"');
-		document.cookie='username=john doe';
 	}else{
 		//User opened this page already
 		var usernameQ=prompt('Please enter your username', '');
