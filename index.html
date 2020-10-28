@@ -13,8 +13,11 @@
 <!--BODY-->
 <div id='content'>
 <div id='nav'>
-	<a href='index.html'><h1 style='font-size:100px;text-align:center;'>Stuff</h1></a>
+	<a href='index.html' style='float: left;'><h1 style='font-size:100px;text-align:center;'>Stuff</h1></a>
+	<a href='style.css' style='float: right;'><h4>Style source code </h4></a>
+	<a href='script.js' style='float: right; clear: right;'><h4>Script source code </h4></a>
 </div>
+<hr style='clear: both;'>
 <br>
 <br>
 <hr>
@@ -118,23 +121,23 @@
 		<div id='MainMathDiv'>
 		<input id='numOne'>
 		<select id='select'>
-			<option value='p'>+</option>
-			<option value='s'>-</option>
-			<option value='m'>*</option>
-			<option value='d'>/</option>
-			<option value='abs'>Absolute value</option>
-			<option value='pow'>^</option>
-			<option value='mod'>Modulus(%)</option>
+			<option value='p'>Addition(+)</option>
+			<option value='s'>Subtraction(-)</option>
+			<option value='m'>Multiplucation(*)</option>
+			<option value='d'>Division(/)</option>
+			<option value='abs'>Absolute value(|)[Abs]</option>
+			<option value='pow'>Exponent(^)</option>
+			<option value='mod'>Modulus(Mod)[%]</option>
 			<option value='exp'>Exponential</option>
-			<option value='sqrt'>Square root(√)</option>
-			<option value='sin'>Sine</option>
-			<option value='cos'>Cosine</option>
-			<option value='tan'>Tangent</option>
-			<option value='asin'>Arcsine</option>
-			<option value='acos'>Arccosine</option>
-			<option value='atan'>Arctangent</option>
-			<option value='log'>Logistic</option>
-			<option value='bin'>Binary</option>
+			<option value='sqrt'>Square root(Sqrt)[√]</option>
+			<option value='sin'>Sine(Sin)</option>
+			<option value='cos'>Cosine(Cos)</option>
+			<option value='tan'>Tangent(Tan)</option>
+			<option value='asin'>Arcsine(Asin)</option>
+			<option value='acos'>Arccosine(Acos)</option>
+			<option value='atan'>Arctangent(Atan)</option>
+			<option value='log'>Logistic(Log)</option>
+			<option value='bin'>Binary(Bin)</option>
 		</select>
 		<input id='numTwo'>
 		<p id='ans'></p>
@@ -206,6 +209,8 @@
 		<h4>Other</h4>
 		<p id='ranStr'></p>
 		<button onclick='randomStr()'>Generate random string</button>
+		<hr>
+		<input type='color'>
 	</div>
 </div>
 <hr>
@@ -237,7 +242,7 @@
 	<button onclick='ShowStats()'>Request stats</button>
 </div>
 <div id='footer'>
-<button onclick='toggleDM()'>Toggle dark mode 😎</button>
+<button onclick='toggleDM()'>😎Toggle dark mode😎</button>
 </div>
 </body>
 </html>
