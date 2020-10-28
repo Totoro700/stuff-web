@@ -2,6 +2,14 @@
 
 ---
 
+License :
+None
+
+Copyright :
+None
+
+---
+
 Ingredients:
   1. index.html - The __main__ script
   2. style.css - The script for __color__
