@@ -137,59 +137,104 @@ function math(){
 	if(s=='p'){
 		//Addtion
 		document.getElementById('ans').innerText=numOne+numTwo;
-	}else if (s=='s'){
+	}else if(s=='s'){
 		//Subtraction
 		document.getElementById('ans').innerText=numOne-numTwo;
-	}else if (s=='m'){
+	}else if(s=='m'){
 		//Multiplication
 		document.getElementById('ans').innerText=numOne*numTwo;
-	}else if (s=='d'){
+	}else if(s=='d'){
 		//Division
 		document.getElementById('ans').innerText=numOne/numTwo;
-	}else if (s=='pow'){
+	}else if(s=='pow'){
 		//To the power of
 		document.getElementById('ans').innerText=Math.pow(numOne, numTwo);
-	}else if (s=='mod'){
+	}else if(s=='mod'){
 		//Modulus
 		document.getElementById('ans').innerText=numOne%numTwo;
-	}else if (s=='exp'){
+	}else if(s=='exp'){
 		//Exponetial
 		document.getElementById('ans').innerText=numOne**numTwo;
-	}else if (s=='sqrt'){
+	}else if(s=='sqrt'){
 		//Square root
 		document.getElementById('ans').innerText=Math.sqrt(numOne);
-	}else if (s=='sin'){
+	}else if(s=='sin'){
 		//Sine
 		document.getElementById('ans').innerText=Math.sin(numOne);
-	}else if (s=='cos'){
+	}else if(s=='cos'){
 		//Cosine
 		document.getElementById('ans').innerText=Math.cos(numOne);
-	}else if (s=='tan'){
+	}else if(s=='tan'){
 		//Tangent
 		document.getElementById('ans').innerText=Math.tan(numOne);
-	}else if (s=='asin'){
-		//Arcsin
+	}else if(s=='asin'){
+		//Arcsine
 		document.getElementById('ans').innerText=Math.asin(numOne);
-	}else if (s=='acos'){
-		//Arccos
+	}else if(s=='acos'){
+		//Arccosine
 		document.getElementById('ans').innerText=Math.acos(numOne);
-	}else if (s=='atan'){
-		//Arctan
+	}else if(s=='atan'){
+		//Arctangent
 		document.getElementById('ans').innerText=Math.atan(numOne);
-	}else if (s=='log'){
+	}else if(s=='log'){
 		//Logistic
 		document.getElementById('ans').innerText=Math.log(numOne);
-	}else if (s=='bin'){
+	}else if(s=='bin'){
 		//Binary
 		document.getElementById('ans').innerText=numOne.toString(2);
-	}else if (s=='abs'){
+	}else if(s=='abs'){
 		//Absolute value
 		document.getElementById('ans').innerText=Math.abs(numOne);
+	}else if(s=='rnd'){
+		//Round
+		document.getElementById('ans').innerText=Math.round(numOne);
+	}else if(s=='flr'){
+		//Floor
+		document.getElementById('ans').innerText=Math.floor(numOne);
+	}else if(s=='ceil'){
+		//Ceiling
+		document.getElementById('ans').innerText=Math.ceil(numOne);
+	}else if(s=='e'){
+		//Euler's number
+		document.getElementById('ans').innerText=Math.E;
+	}else if(s=='sinh'){
+		//Hyperbolic sine
+		document.getElementById('ans').innerText=Math.sinh(numOne);
+	}else if(s=='cosh'){
+		//Hyperbolic cosine
+		document.getElementById('ans').innerText=Math.cosh(numOne);
+	}else if(s=='tanh'){
+		//Hyperbolic tangent
+		document.getElementById('ans').innerText=Math.tanh(numOne);
+	}else if(s=='asinh'){
+		//Hyperbolic arcsine
+		document.getElementById('ans').innerText=Math.asinh(numOne);
+	}else if(s=='acosh'){
+		//Hyperbolic arccosine
+		document.getElementById('ans').innerText=Math.acosh(numOne);
+	}else if(s=='atanh'){
+		//Hyperbolic arctangent
+		document.getElementById('ans').innerText=Math.atanh(numOne);
+	}else if(s=='cbrt'){
+		//Cubic root
+		document.getElementById('ans').innerText=Math.cbrt(numOne);
+	}else if(s=='ea'){
+		//Add by Euler's number
+		document.getElementById('ans').innerText=Math.E+numOne;
+	}else if(s=='es'){
+		//Subtract by Euler's number
+		document.getElementById('ans').innerText=numOne-Math.E;
+	}else if(s=='em'){
+		//Multiply by Euler's number
+		document.getElementById('ans').innerText=Math.E*numOne;
+	}else if(s=='ed'){
+		//Divide by Euler's number
+		document.getElementById('ans').innnerText=numOne/Math.E;
 	}
 }
 //Pi
 function Pi(){
-	document.getElementById('piAns').innerText='1 Pi ≈ '+Math.PI.toString();
+	document.getElementById('piAns').innerText='1 Pi ≈ 3.1415926535897932384626433832795028841971693993751058209749445923078164062862089986280348253421170679';
 }
 //Radians
 function Rad(){
