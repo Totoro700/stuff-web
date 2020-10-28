@@ -343,3 +343,7 @@ function ShowStats(){
 function toggleDM(){
 	document.body.classList.toggle('darkMode');
 }
+function cookieList(){
+	var wn=window.open('about:blank', 'popup', 'None');
+	wn.document.write('Cookies: \n_gads \nCookies enable?: '+window.navigator.cookieEnabled);
+}
