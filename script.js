@@ -221,7 +221,7 @@ function Run(){
 		var alpha = prompt(document.getElementById('acpstr').value, document.getElementById('acpstrt').value);
 		document.getElementById('returnValue').innerText=alpha;
 	}else if (rs=='p2'){
-		Ask()
+		Ask();
 	}
 }
 function setup(){
