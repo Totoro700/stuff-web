@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!--HEAD-->
+<meta charset='utf-8'>
+<title>Stuff</title>
+<!--CSS JavaScript Noscript-->
+<link rel='stylesheet' type='text/CSS' href='style.css'>
+<script src='script.js'></script>
+<noscript>JavaScript is disabled! Many functions will not operate without JavaScript. Please make sure that you enable JavaScript for full functions.</noscript>
+</head>
+<body id='Body' onload='setup()'>
+<!--BODY-->
+<div id='content'>
+<div id='nav'>
+	<a href='index.html' style='float: left;'><h1 style='font-size:100px;text-align:center;'>Stuff</h1></a>
+	<a href='style.txt' style='float: right;'><h4>CSS source code </h4></a>
+	<a href='script.txt' style='float: right; clear: right;'><h4>JS source code </h4></a>
+	<a href='index.txt' style='float: right; clear: right;'><h4>HTML source code </h4></a>
+</div>
+<hr style='clear: both;'>
+<br>
+<br>
+<hr>
+<br>
+<br>
+<table id='table'>
+<!--TABLE-->
+	<tr>
+		<th></th>
+		<th>HTML</th>
+		<th>CSS</th>
+		<th>JavaScript(JS)</th>
+	</tr>
+	<tr>
+		<th>Special Characters</th>
+		<td> < > / ! </td>
+		<td> { } # . , : ; </td>
+		<td> ( ) [ ] { } ; . = </td>
+	</tr>
+	<tr>
+		<th>Common Keywords</th>
+		<td> !DOCTYPE html body head title script style src href </td>
+		<td> margin padding border color backgrond-color z-index margin-left margin-right text-align </td>
+		<td> function var const document getElementById window localStorage if else Math null undefined</td>
+	</tr>
+	<tr>
+		<th>File Endings</th>
+		<td> .html </td>
+		<td> .css </td>
+		<td> .js </td>
+	</tr>
+	<tr>
+		<th>Use</th>
+		<td> Content of the webpage </td>
+		<td> Color and style of the webpage </td>
+		<td> Functions and interactiveness of the webpage </td>
+	</tr>
+	<tr>
+		<th>Stands for</th>
+		<td> <strong>H</strong>yper<strong>t</strong>ext <strong>M</strong>arkup <strong>L</strong>anguage </td>
+		<td> <strong>C</strong>ascading <strong>S</strong>tyle <strong>S</strong>heets </td>
+		<td> <strong>J</strong>ava<strong>S</strong>cript </td>
+	</tr>
+	<tr>
+		<th>Print/Write Something</th>
+		<td> <p>[Text]</p> </td>
+		<td>  </td>
+		<td> document.write([Text]); </td>
+	</tr>
+</table>
+<br>
+<hr>
+<br>
+<h1>Example Html</h1>
+<h1>Heading</h1>
+<p>Paragraph text <b>BOLD TEXT</b> <i>Italic text</i> <em>Empasized text</em> <sub>Subscript</sub> <sup>Superscript</sup></p>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<hr>
+<button onclick='Google()' id='ButtonGoogle'>Google's home page</button>
+<button onclick='Microsoft()' id='ButtonMicrosoft'>Microsoft's home page</button>
+<hr>
+<div id='Cursors'>
+<h2>Cursors type</h2>
+	<button onclick='Reload()' class='ButtonDefault' style='cursor: wait;'>Reload site</button>
+	<button style='cursor:wait;' class='ButtonDefault'>Wait</button>
+	<button style='cursor:crosshair;' class='ButtonDefault'>Cross</button>
+	<button style='cursor:None;' class='ButtonDefault'>None</button>
+	<button class='ButtonDefault'>Regular</button>
+	<button style='cursor:pointer;' class='ButtonDefault'>Pointer</button>
+	<button style='cursor:progress;' class='ButtonDefault'>Progress</button>
+	<button style='cursor:cell;' class='ButtonDefault'>Cell</button>
+	<button style='cursor:text;' class='ButtonDefault'>Text</button>
+	<button style='cursor:vertical-text;' class='ButtonDefault'>Vertical Text</button>
+	<button style='cursor:alias;' class='ButtonDefault'>Alias</button>
+	<button style='cursor:copy;' class='ButtonDefault'>Copy</button>
+	<button style='cursor:move;' class='ButtonDefault'>Move</button>
+	<button style='cursor:no-drop;' class='ButtonDefault'>No Drop</button>
+	<button style='cursor:not-allowed;' class='ButtonDefault'>Not Allowed</button>
+	<button style='cursor:all-scroll;' class='ButtonDefault'>All Scroll</button>
+	<button style='cursor:col-resize;' class='ButtonDefault'>Col-Resize</button>
+	<button style='cursor:row-resize;' class='ButtonDefault'>Row-Resize</button>
+	<button style='cursor:n-resize;' class='ButtonDefault'>North-Resize</button>
+	<button style='cursor:e-resize;' class='ButtonDefault'>East-Resize</button>
+	<button style='cursor:s-resize;' class='ButtonDefault'>South-Resize</button>
+	<button style='cursor:w-resize;' class='ButtonDefault'>West-Resize</button>
+</div>
+<hr>
+<div id='Tools'>
+	<!--TOOLS-->
+	<h1>Tools</h1>
+	<hr>
+	<div id='MathDiv'>
+		<!--MATH-->
+		<h2>Math</h2>
+		<hr>
+		<div id='MainMathDiv'>
+		<input id='numOne'>
+		<select id='select'>
+			<option value='p'>Addition(+)</option>
+			<option value='s'>Subtraction(-)</option>
+			<option value='m'>Multiplucation(*)</option>
+			<option value='d'>Division(/)</option>
+			<option value='abs'>Absolute value(|)[Abs]</option>
+			<option value='pow'>Exponent(^)</option>
+			<option value='mod'>Modulus(Mod)[%]</option>
+			<option value='exp'>Exponential</option>
+			<option value='sqrt'>Square root(Sqrt)[√]</option>
+			<option value='sin'>Sine(Sin)</option>
+			<option value='cos'>Cosine(Cos)</option>
+			<option value='tan'>Tangent(Tan)</option>
+			<option value='asin'>Arcsine(Asin)</option>
+			<option value='acos'>Arccosine(Acos)</option>
+			<option value='atan'>Arctangent(Atan)</option>
+			<option value='log'>Logistic(Log)</option>
+			<option value='bin'>Binary(Bin)</option>
+		</select>
+		<input id='numTwo'>
+		<p id='ans'></p>
+		<button id='CalculateMath' onclick='math()'>Calculate</button>
+		</div>
+		<hr>
+		<div id='MemoryDiv'>
+			<h5>Memory</h5>
+			<hr>
+			<button onclick='MemorySave()' class='Memory'>Memory Save (MS)</button>
+			<button onclick='MemoryRecall()' class='Memory'>Memory Recall (MR)</button>
+			<button onclick='MemoryClear()' class='Memory'>Memory Clear (MC)</button>
+			<hr>
+		</div>
+		<div id='OtherFuncDiv'>
+			<h5>Other functions</h5>
+			<hr>
+			<button onclick='Pi()' class='MathBtn'>Pi</button>
+			<p id='piAns'></p>
+			<hr>
+			<button onclick='Rad()' class='MathBtn'>Radian(Rad)</button>
+			<p id='radAns'></p>
+			<hr>
+			<button onclick='Deg()' class='MathBtn'>Degree(Deg)</button>
+			<p id='degAns'></p>
+			<hr>
+			<button onclick='MathClear()' class='MathBtn'>Clear</button>
+		</div>
+	</div>
+	<hr>
+	<div id='ACP'>
+		<h3>Alert, Confirm, And Prompt</h3>
+		<hr>
+		<input id='acpstr'>
+		<hr>
+		<select id='ACPselect'>
+			<option value='a'>Alert</option>
+			<option value='c'>Confirm</option>
+			<option value='p'>Prompt</option>
+			<option value='p2'>Prompt 2</option>
+		</select>
+		<hr>
+		<input id='acpstrt'>
+		<hr>
+		<button onclick='Run()' id='RunButton'>Run</button>
+		<hr>
+		<p id='returnValue'></p>
+	</div>
+	<hr>
+	<div id='Links'>
+		<!--LINKS & PAGES-->
+		<h3>Links</h3>
+		<hr>
+		<input id='RLink'>
+		<button onclick='Redirect()' id='RedirectButton'>Redirect</button>
+		<hr>
+		<input id='Olink'>
+		<button onclick='Open()' id='OpenLinkButton'>Open</button>
+		<hr>
+		<h3>Popups</h3>
+		<button onclick='Popup()'>Open Popup</button>
+		<hr>
+		<input id='PopupLink'>
+		<hr>
+		<button onclick='OpenPopup()'>Open Popup with link</button>
+	</div>
+	<hr>
+	<div id='OtherDiv'>
+		<h4>Other</h4>
+		<p id='ranStr'></p>
+		<button onclick='randomStr()'>Generate random string</button>
+		<hr>
+		<input type='color'>
+	</div>
+</div>
+<hr>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<hr>
+<div id='alignment'>
+	<h5>Alignment</h5>
+	<button onclick='Left()' class='Alignment'>Left</button>
+	<button onclick='Center()' class='Alignment'>Center</button>
+	<button onclick='Right()' class='Alignment'>Right</button>
+	<hr>
+	<button onclick='Random()' class='Alignment'>Random</button>
+	<hr>
+	<button onclick='AlignNext()' class='Alignment'>Next</button>
+	<button onclick='AlignPrev()' class='Alignment'>Previous</button>
+	<hr>
+	<p id='CurrentAlignment'>Alignment: Center</p>
+	<hr>
+</div>
+<div id='DataDiv'>
+	<h5>Data</h5>
+	<button onclick='clearLS()'>Clear data</button>
+	<button onclick='ReqInfo()'>Request Username and Password</button>
+	<button onclick='ShowStats()'>Request stats</button>
+</div>
+<div id='footer'>
+<button onclick='toggleDM()'>😎Toggle dark mode😎</button>
+</div>
+</body>
+</html>
