@@ -44,4 +44,5 @@ div {margin:5px;}
 #alignment {padding:5px;border:3px solid black;}
 #OtherDiv {border:2.5px solid yellow;padding:5px;}
 #DataDiv {border:2.5px solid green;padding:5px;}
+/* Vertical line */
 .vl {border-left:6px solid white;height:200px;position:absolute;left:50%;margin-left:-3px;top:1;}
