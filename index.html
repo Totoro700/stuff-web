@@ -8,8 +8,8 @@
 <link rel='stylesheet' type='text/CSS' href='style.css'>
 <script src='script.js'></script>
 <noscript>JavaScript is disabled! Many functions will not operate without JavaScript. Please make sure that you enable JavaScript for full functions.</noscript>
-<script data-ad-client="ca-pub-5432715676286980" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<script data-ad-client='ca-pub-5432715676286980' async src='https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js'></script>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
 </head>
 <body id='Body' onload='setup()'>
 <!--BODY-->
@@ -226,9 +226,10 @@
 		<hr>
 		<h2>Loading sign</h2>
 		<div id='loadingDiv'></div>
-		<p>Speed: </p>
-		<input type='number' id='loadSpeed'>
+		<p>Turn speed: </p>
+		<input type='number' id='loadSpeed' min='0.001' max='100'>
 		<button onclick='updateLoadSpeed()'>Update</button>
+		<hr>
 	</div>
 </div>
 <hr>
@@ -263,5 +264,10 @@
 <div id='footer'>
 <button onclick='toggleDM()'>😎Toggle dark mode😎</button>
 </div>
+<hr>
+<br>
+<br>
+<a href='donate.html'>Donate</a>
+</form>
 </body>
 </html>
