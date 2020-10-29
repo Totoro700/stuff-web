@@ -128,12 +128,16 @@ function AlignPrev(){
 /***********Math***********/
 //Math functions
 function math(){
+	var d=new Date();
 	//Get Numbers
 	var numOne=parseInt(document.getElementById('numOne').value); 
 	var numTwo=parseInt(document.getElementById('numTwo').value); 
 	//Get selected operation
-	var s=document.getElementById('select').value; 
-	//Check & calculate
+	var s=document.getElementById('select').value;
+	if (isNaN(numOne) || isNaN(numTwo)){
+		console.error('Input is NaN '+d.getHours()+':'+d.getMinutes()+'.'+d.getSeconds());
+	}
+	//Check & Calculate
 	if(s=='p'){
 		//Addtion
 		document.getElementById('ans').innerText=numOne+numTwo;
@@ -281,19 +285,19 @@ function login(){
 	if (username==null && UserPassword==null){
 		//User has not opened the page before
 		//Name
-		var name=prompt('Please enter your name', '');
+		var name=prompt('Please enter your name: ', '');
 		if (name==null || name==''){
-			var name='[None]';
+			var name='User';
 		}
 		localStorage.setItem('name', name);
 		//Username
-		var username=prompt('Please choose a username you can remember', '');
+		var username=prompt('Please choose a username you can remember: ', '');
 		if (username==null || username==''){
 			var username='';
 		}
 		localStorage.setItem('username', username);
 		//Password
-		var pass = prompt('Please choose a password you can remember', '');
+		var pass = prompt('Please choose a password you can remember: ', '');
 		if (pass==null || pass==''){
 			var pass='';
 		}
@@ -310,7 +314,7 @@ function login(){
 			alert('Welcome back '+name+'!');
 		}else{
 			alert('The used login info was not valid!');
-			var resetInfo=confirm('Do you want to reset your login info?');
+			var resetInfo=confirm('Do you want to reset your login info? OK for reset , Cancel to try to login again');
 			if (resetInfo){
 				localStorage.clear();
 				alert('Please choose another username and password you will remember');
@@ -338,6 +342,7 @@ function ReqInfo(){
 function ShowStats(){
 	var lang = window.navigator.language;
 	var syst = window.navigator.platform;
+	alert('Info! These stats are collected from JavaScript!');
 	alert(' Stats: \n Language: '+lang+' \n Platform: '+syst+' \n Cookies enabled: '+window.navigator.cookieEnabled+' \n Online: '+window.navigator.onLine+' \n Vendor: '+window.navigator.vendor+' \n User Agent: '+window.navigator.userAgent);
 }
 function toggleDM(){
