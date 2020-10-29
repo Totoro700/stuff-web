@@ -128,15 +128,12 @@ function AlignPrev(){
 /***********Math***********/
 //Math functions
 function math(){
-	var d=new Date();
 	//Get Numbers
 	var numOne=parseInt(document.getElementById('numOne').value); 
 	var numTwo=parseInt(document.getElementById('numTwo').value); 
 	//Get selected operation
 	var s=document.getElementById('select').value;
-	if (isNaN(numOne) || isNaN(numTwo)){
-		console.error('Input is NaN '+d.getHours()+':'+d.getMinutes()+'.'+d.getSeconds());
-	}
+	if (isNaN(numOne) || isNaN(numTwo)){console.error('Input is NaN');}
 	//Check & Calculate
 	if(s=='p'){
 		//Addtion
