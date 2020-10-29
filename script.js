@@ -345,6 +345,9 @@ function ShowStats(){
 	alert('Info! These stats are collected from JavaScript!');
 	alert(' Stats: \n Language: '+lang+' \n Platform: '+syst+' \n Cookies enabled: '+window.navigator.cookieEnabled+' \n Online: '+window.navigator.onLine+' \n Vendor: '+window.navigator.vendor+' \n User Agent: '+window.navigator.userAgent);
 }
+function updateLoadSpeed(){
+	document.getElementById('loadingDiv').style.animation='spin '+document.getElementById('loadSpeed').value+'s linear infinite';
+}
 function toggleDM(){
 	document.body.classList.toggle('darkMode');
 }
