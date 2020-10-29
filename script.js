@@ -278,7 +278,7 @@ function Run(){
 }
 //Setup
 function setup(){
-	login();
+	//login();
 	Center();
 }
 //Check Local Storage
