@@ -9,6 +9,7 @@
 <script src='script.js'></script>
 <noscript>JavaScript is disabled! Many functions will not operate without JavaScript. Please make sure that you enable JavaScript for full functions.</noscript>
 <script data-ad-client="ca-pub-5432715676286980" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body id='Body' onload='setup()'>
 <!--BODY-->
@@ -43,7 +44,7 @@
 		<th>Common Keywords</th>
 		<td> !DOCTYPE html body head title script style src href </td>
 		<td> margin padding border color backgrond-color z-index margin-left margin-right text-align </td>
-		<td> function var const document getElementById window localStorage if else Math null undefined</td>
+		<td> function var const document getElementById window localStorage if else Math null undefined </td>
 	</tr>
 	<tr>
 		<th>File Endings</th>
@@ -116,7 +117,7 @@
 		<h2>Math</h2>
 		<hr>
 		<div id='MainMathDiv'>
-		<input id='numOne'>
+		<input id='numOne' type='number'>
 		<select id='select'>
 			<option value='p'>Addition(+)</option>
 			<option value='s'>Subtraction(-)</option>
@@ -151,7 +152,7 @@
 			<option value='em'>Multiply by Euler's number</option>
 			<option value='ed'>Divide by Euler's number</option>
 		</select>
-		<input id='numTwo'>
+		<input id='numTwo' type='number'>
 		<p id='ans'></p>
 		<button id='CalculateMath' onclick='math()'>Calculate</button>
 		</div>
