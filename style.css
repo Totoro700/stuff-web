@@ -19,7 +19,7 @@ div {margin:5px;}
 #ButtonGoogle {color:#FF0000;}
 #ButtonMicrosoft {color:navy;}
 /* Alert, confirm, & prompt */
-#ACP {border:2.5px solid red;padding:5px;}
+#ACPselect {border:2.5px solid red;padding:2px;}
 #acpstr {border:5px solid red;padding:2px;}
 #acpstrt {border:5px solid green;padding:2px;}
 #RunButton {border:5px solid blue;padding:2px;}
@@ -47,17 +47,6 @@ div {margin:5px;}
 /* Vertical line */
 .vl {border-left:6px solid white;height:200px;position:absolute;left:50%;margin-left:-3px;top:1;}
 /* Loading sign */
-#loadingDiv {
-	margin-left:auto;
-	margin-right:auto;
-	border:6px solid #F3F3F3;
-	border-top:6px solid #3498DB;
-	border-radius:50%;
-	width:50px;
-	height:50px;
-	animation:spin 1s linear infinite;
-}
-@keyframes spin{
-	0% {transform:rotate(0deg);}
-	100% {transform:rotate(360deg);}
-}
+#loadingDiv {margin-left:auto;margin-right:auto;border:6px solid #F3F3F3;border-top:6px solid #3498DB;border-radius:50%;width:50px;height:50px;animation:spin 0.5s linear infinite;}
+@keyframes spin{0% {transform:rotate(0deg);}100% {transform:rotate(360deg);}}
+#loadSpeed {padding:2px;border:2.5px solid blue;margin:5px;}
