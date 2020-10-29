@@ -233,7 +233,10 @@ function math(){
 		document.getElementById('ans').innerText=Math.E*numOne;
 	}else if(s=='ed'){
 		//Divide by Euler's number
-		document.getElementById('ans').innnerText=numOne/Math.E;
+		document.getElementById('ans').innerText=numOne/Math.E;
+	}else if(s=='nan'){
+		//Is Not a Number?
+		document.getElementById('ans').innerText=isNaN(numOne);
 	}
 }
 //Pi
@@ -273,6 +276,7 @@ function Run(){
 		Ask();
 	}
 }
+//Setup
 function setup(){
 	login();
 	Center();
