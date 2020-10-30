@@ -6,6 +6,7 @@ h5 {color:green;}
 button {background-color:#FFF;}
 body {background-color:#CCC;font-family:ink free;padding:5px;}
 div {margin:5px;}
+ul {list-style-type:none;}
 /********** Classes **********/
 .ButtonDefault {color:#0000FF;}
 .Memory {padding:2px;margin:5px;border:3px solid blue;background-color:#FFF;}
@@ -44,21 +45,7 @@ div {margin:5px;}
 #alignment {padding:5px;border:3px solid black;}
 #OtherDiv {border:2.5px solid yellow;padding:5px;}
 #DataDiv {border:2.5px solid green;padding:5px;}
-/* Vertical line */
-.vl {border-left:6px solid white;height:300px;position:absolute;left:50%;margin-left:-3px;top:1;}
 /* Loading sign */
-#loadingDiv {
-	animation:spin 0.5s linear infinite;
-	border:6px solid #F3F3F3;
-	border-radius:50%;
-	border-top:6px solid #3498DB;
-	margin-left:auto;
-	margin-right:auto;
-	width:50px;
-	height:50px;
-}
-@keyframes spin{
-	0% {transform:rotate(0deg);}
-	100% {transform:rotate(360deg);}
-}
+#loadingDiv {animation:spin 0.5s linear infinite;border:6px solid #F3F3F3;border-radius:50%;border-top:6px solid #3498DB;margin-left:auto;margin-right:auto;width:50px;height:50px;}
+@keyframes spin{0% {transform:rotate(0deg);}100% {transform:rotate(360deg);}}
 #loadSpeed {padding:2px;border:2.5px solid blue;margin:5px;}
