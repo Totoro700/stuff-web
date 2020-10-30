@@ -332,7 +332,7 @@ function randomStr(){
 //Clear local storage
 function clearLS(){
 	localStorage.clear();
-	login();
+	//login();
 }
 function ReqInfo(){
 	var username = localStorage.getItem('username');
