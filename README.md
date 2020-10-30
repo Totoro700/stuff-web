@@ -23,4 +23,4 @@ Main Ingredients:
 
 Other
 
-[Website](https://stuff-web.xyz)
+[Website](https://stuff-web.xyz/index.html)
