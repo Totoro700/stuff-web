@@ -3,14 +3,20 @@
 <head>
 <meta charset='utf-8'>
 <meta name='viewport' content='width=device-width, initial-scale=1'>
-<title>404 Page not found</title>
+<title>Error 404 Page not found</title>
 <style>
 body {text-align:center;background-color:#CCC;}
 </style>
+<script>
+function getPage(){
+	var page = location;
+	document.getElementById('link').innerText=page;
+}
+</script>
 </head>
-<body>
+<body onload='getPage()'>
 <h1>Looks like there is nothing here!</h1>
 <hr>
-<p>This page is not found!</p>
+<p id='link'></p><p> is not found!</p>
 </body>
 </html>
