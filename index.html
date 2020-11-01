@@ -109,6 +109,9 @@
 	<button style='cursor:w-resize;' class='ButtonDefault'>West-Resize</button>
 </div>
 <hr>
+<br>
+<br>
+<br>
 <div id='Tools'>
 	<!--TOOLS-->
 	<h1>Tools</h1>
@@ -118,7 +121,7 @@
 		<h2>Math</h2>
 		<hr>
 		<div id='MainMathDiv'>
-		<input class='num' type='number' placeholder='Number One'>
+		<input class='num' id='numOne' type='number' placeholder='Number One'>
 		<select id='select'>
 			<option value='p'>Addition(+)</option>
 			<option value='s'>Subtraction(-)</option>
@@ -154,10 +157,12 @@
 			<option value='ed'>Divide by Euler's number</option>
 			<option value='nan'>Not a Number? (NaN)</option>
 		</select>
-		<input class='num' type='number' placeholder='Number Two'>
+		<input class='num' id='numTwo' type='number' placeholder='Number Two'>
 		<p id='ans'></p>
 		<button id='CalculateMath' onclick='math()'>Calculate</button>
-		<p>Open this on <a href='mathCalculator.html'>another page</a></p>
+		<br>
+		<button onclick='openC()' class='mathBtn'>Open this on another page</button>
+		<button onclick='openCPopup()' class='mathBtn'>Open this as a popup</button>
 		</div>
 		<hr>
 		<div id='MemoryDiv'>
@@ -176,17 +181,15 @@
 			<hr>
 			<button onclick='Rad()' class='MathBtn'>Radian(Rad)</button>
 			<p id='radAns'></p>
-			<hr>
+			<br>
 			<button onclick='Deg()' class='MathBtn'>Degree(Deg)</button>
 			<p id='degAns'></p>
-			<hr>
-			<button onclick='MathClear()' class='MathBtn'>Clear</button>
 		</div>
 	</div>
-	<hr>
+	<br>
 	<div id='ACP'>
 		<h3>Alert, Confirm, And Prompt</h3>
-		<hr>
+		<br>
 		<input id='acpstr'>
 		<hr>
 		<select id='ACPselect'>
@@ -245,7 +248,7 @@
 <br>
 <br>
 <br>
-<hr>
+<br>
 <div id='alignment'>
 	<h5>Alignment</h5>
 	<button onclick='Left()' class='Alignment'>Left</button>
@@ -253,12 +256,12 @@
 	<button onclick='Right()' class='Alignment'>Right</button>
 	<hr>
 	<button onclick='Random()' class='Alignment'>Random</button>
-	<hr>
+	<br>
 	<button onclick='AlignNext()' class='Alignment'>Next</button>
 	<button onclick='AlignPrev()' class='Alignment'>Previous</button>
-	<hr>
+	<br>
 	<p id='CurrentAlignment'>Alignment: Center</p>
-	<hr>
+	<br>
 </div>
 <div id='DataDiv'>
 	<h5>Data</h5>
@@ -267,11 +270,11 @@
 </div>
 <div id='footer'>
 <button onclick='toggleDM()'>😎Toggle dark mode😎</button>
-<hr>
+<br>
 <p>
 <a href='about.html'>About</a> | <a href='donate.html'>Donate</a> | <a href='bugReport.html'>Report a problem</a></p>
 </div>
-<hr>
+<br>
 <br>
 <br>
 </body>
