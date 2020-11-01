@@ -317,7 +317,7 @@ function cookieList(){
 	wn.document.write('Cookies: \n_gads \nCookies enable?: '+window.navigator.cookieEnabled);
 }
 function openC(){
-	location='https://stuff-web.xyz/mathCalculator';
+	window.open('https://stuff-web.xyz/mathCalculator');
 }
 function openCPopup(){
 	window.open('https://stuff-web.xyz/mathCalculator', 'popup', 'width=500,height=500');
