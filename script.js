@@ -133,7 +133,6 @@ function math(){
 	var numTwo=parseInt(document.getElementById('numTwo').value); 
 	//Get selected operation
 	var s=document.getElementById('select').value;
-	if (isNaN(numOne) || isNaN(numTwo)){console.error('Input is NaN');}
 	//Check & Calculate
 	if(s=='p'){
 		//Addtion
@@ -233,20 +232,39 @@ function math(){
 		document.getElementById('ans').innerText=numOne/Math.E;
 	}else if(s=='nan'){
 		//Is Not a Number?
-		document.getElementById('ans').innerText=isNaN(numOne);
+		if (isNaN(numOne)){
+			document.getElementById('ans').innerText=numOne+' is not a number(NaN)';
+		}else{
+			document.getElementById('ans').innerText=numOne+' is a number';
+		}
 	}
 }
 //Pi
 function Pi(){
-	document.getElementById('piAns').innerText='1 Pi ≈ 3.1415926535897932384626433832795028841971693993751058209749445923\n078164062862089986280348253421170679';
+	var piCont=document.getElementById('piAns').innerText;
+	if (piCont==null || piCont==''){
+		document.getElementById('piAns').innerText='1 Pi ≈ 3.1415926535897932384626433832795028841971693993751058209749445923\n078164062862089986280348253421170679';
+	}else{
+		document.getElementById('piAns').innerText='';
+	}	
 }
 //Radians
 function Rad(){
-	document.getElementById('radAns').innerText='1 Radian ≈ '+57.2958+' Degrees(Deg)';
+	var radCont=document.getElementById('radAns').innerText;
+	if (radCont==null || radCont==''){
+		document.getElementById('radAns').innerText='1 Radian ≈ '+57.2958+' Degrees(Deg)';
+	}else{
+		document.getElementById('radAns').innerText='';
+	}
 }
 //Degrees
 function Deg(){
-	document.getElementById('degAns').innerText='1 Degree ≈ '+0.0174533+' Radians(Rad)';
+	var degCont=document.getElementById('degAns').innerText;
+	if (degCont==null || degCont==''){
+		document.getElementById('degAns').innerText='1 Degree ≈ '+0.0174533+' Radians(Rad)';
+	}else{
+		document.getElementById('degAns').innerText='';
+	}
 }
 /***********Other***********/
 function Run(){
@@ -273,66 +291,8 @@ function Run(){
 		Ask();
 	}
 }
-//Setup
-function setup(){
-	//login();
-	Center();
-}
-//Check Local Storage
-function login(){
-	//Get data
-	var username=localStorage.getItem('username');
-	var UserPassword=localStorage.getItem('password');
-	if (username==null && UserPassword==null){
-		//User has not opened the page before
-		//Name
-		var name=prompt('Please enter your name: ', '');
-		if (name==null || name==''){
-			var name='User';
-		}
-		localStorage.setItem('name', name);
-		//Username
-		var username=prompt('Please choose a username you can remember: ', '');
-		if (username==null || username==''){
-			var username='';
-		}
-		localStorage.setItem('username', username);
-		//Password
-		var pass = prompt('Please choose a password you can remember: ', '');
-		if (pass==null || pass==''){
-			var pass='';
-		}
-		localStorage.setItem('password', pass);
-		alert('This page uses some local storage, if you want to clear or reset it, scroll down to the end of the page and click "Clear Data"');
-	}else{
-		//User opened this page already
-		var usernameQ=prompt('Please enter your username', '');
-		var passwordQ=prompt('Please enter your password', '');
-		if (usernameQ==username && passwordQ==UserPassword){
-			//Get name
-			var name=localStorage.getItem('name');
-			//Greeting
-			alert('Welcome back '+name+'!');
-		}else{
-			alert('The used login info was not valid!');
-			var resetInfo=confirm('Do you want to reset your login info? OK for reset , Cancel to try to login again');
-			if (resetInfo){
-				localStorage.clear();
-				alert('Please choose another username and password you will remember');
-				login();
-			}else{
-				login();
-			}
-		}
-	}
-}
 function randomStr(){
 	document.getElementById('ranStr').innerText=Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15);
-}
-//Clear local storage
-function clearLS(){
-	localStorage.clear();
-	//login();
 }
 function ReqInfo(){
 	var username = localStorage.getItem('username');
@@ -355,4 +315,10 @@ function toggleDM(){
 function cookieList(){
 	var wn=window.open('about:blank', 'popup', 'None');
 	wn.document.write('Cookies: \n_gads \nCookies enable?: '+window.navigator.cookieEnabled);
+}
+function openC(){
+	location='https://stuff-web.xyz/mathCalculator';
+}
+function openCPopup(){
+	window.open('https://stuff-web.xyz/mathCalculator', 'popup', 'width=500,height=500');
 }
