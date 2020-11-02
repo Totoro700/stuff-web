@@ -301,7 +301,7 @@ function ShowStats(){
 	alert(' Stats: \n Language: '+lang+' \n Platform: '+syst+' \n Cookies enabled: '+window.navigator.cookieEnabled+' \n Online: '+window.navigator.onLine+' \n Vendor: '+window.navigator.vendor+' \n User Agent: '+window.navigator.userAgent);
 }
 function showLS(){
-	alert('Info! We use local storage to remember your choices of you background image and background color!');
+	alert('Info! We use local storage to remember your choices of you background image, background color, and others!');
 }
 function updateLoadSpeed(){
 	document.getElementById('loadingDiv').style.animation='spin '+document.getElementById('loadSpeed').value+'s linear infinite';
@@ -316,30 +316,30 @@ function load(){
 	Center();
 	var imgUrl=localStorage.getItem('imgUrl');
 	if (imgUrl=='' || imgUrl==null){
-		document.body.style.backgroundColor="#CCC";
+		document.body.style.backgroundColor='#CCC';
 	}else{
-		document.body.style.backgroundImage="url('"+imgUrl+"')";
+		document.body.style.backgroundImage='url('+imgUrl+')';
 	}
 	var bckClr=localStorage.getItem('bckClr');
 	if (bckClr=='' || bckClr==null){
-		document.body.style.backgroundColor="#CCC";
+		document.body.style.backgroundColor='#CCC';
 	}else{
 		document.body.style.backgroundColor=bckClr;
 	}
 	var txtClr=localStorage.getItem('txtClr');
 	if (txtClr=='' || txtClr==null){
-		document.body.style.color="#000";
+		document.body.style.color='#000';
 	}else{
 		document.body.style.color=txtClr;
 	}
 }
 function placeImg(){
 	var imgLink=document.getElementById('url').value;
-	document.body.style.backgroundImage="url('"+imgLink+"')";
+	document.body.style.backgroundImage='url('+imgLink+')';
 	localStorage.setItem('imgUrl', imgLink);
 }
 function clearImg(){
-	document.body.style.backgroundImage="url('')";
+	document.body.style.backgroundImage='url()';
 	localStorage.setItem('imgUrl', '');
 }
 function setColor(){
@@ -348,7 +348,7 @@ function setColor(){
 	localStorage.setItem('bckClr', color);
 }
 function clearColor(){
-	document.body.style.backgroundColor="#CCC";
+	document.body.style.backgroundColor='#CCC';
 	localStorage.setItem('bckClr', '');
 }
 function setColorTxt(){
@@ -357,6 +357,6 @@ function setColorTxt(){
 	localStorage.setItem('txtClr', txtColor);
 }
 function clearColorTxt(){
-	document.body.style.color="#CCC";
+	document.body.style.color='#CCC';
 	localStorage.setItem('txtClr', '');
 }
