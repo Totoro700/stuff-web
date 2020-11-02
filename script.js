@@ -322,3 +322,36 @@ function openC(){
 function openCPopup(){
 	window.open('https://stuff-web.xyz/mathCalculator', 'popup', 'width=500,height=500');
 }
+function load(){
+	Center();
+	var imgUrl=localStorage.getItem('imgUrl');
+	if (imgUrl=='' || imgUrl==null){
+		document.body.style.backgroundColor="#CCC";
+	}else{
+		document.body.style.backgroundImage="url('"+imgUrl+"')";
+	}
+	var bckClr=localStorage.getItem('bckClr');
+	if (bckClr=='' || bckClr==null){
+		document.body.style.backgroundColor="#CCC";
+	}else{
+		document.body.style.backgroundColor=bckClr;
+	}
+}
+function placeImg(){
+	var imgLink=document.getElementById('url').value;
+	document.body.style.backgroundImage="url('"+imgLink+"')";
+	localStorage.setItem('imgUrl', imgLink);
+}
+function clearImg(){
+	document.body.style.backgroundImage="url('')";
+	localStorage.setItem('imgUrl', '');
+}
+function setColor(){
+	var color=document.getElementById('bckClr').value;
+	document.body.style.backgroundColor=color;
+	localStorage.setItem('bckClr', color);
+}
+function clearColor(){
+	document.body.style.backgroundColor="#CCC";
+	localStorage.setItem('bckClr', '');
+}
