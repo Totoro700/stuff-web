@@ -275,7 +275,7 @@
 <div id='DataDiv'>
 	<h5>Data</h5>
 	<button onclick='ShowStats()'>Request stats</button>
-	<button onclick='cookieList()'>Cookies in use</button><br>
+	<button onclick='showLS()'>How we use storage</button><br>
 	<br>
 	<div id='backgroundCus'>
 		<p>Background</p><br>
@@ -287,11 +287,14 @@
 		<input type='color' id='bckClr'><br>
 		<button onclick='setColor()'>Set color</button>
 		<button onclick='clearColor()'>Clear color</button>
+		<p>Text</p>
+		<input type='color' id='txtClr'><br>
+		<button onclick='setColorTxt()'>Set color</button>
+		<button onclick='clearColorTxt()'>Clear color</button>
 		<br>
 	</div>
 </div>
 <div id='footer'>
-<button onclick='toggleDM()'>😎Toggle dark mode😎</button>
 <br>
 <p>
 <a href='about.html'>About</a> | <a href='donate.html'>Donate</a> | <a href='bugReport.html'>Report a problem</a></p>
