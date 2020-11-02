@@ -294,27 +294,17 @@ function Run(){
 function randomStr(){
 	document.getElementById('ranStr').innerText=Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15);
 }
-function ReqInfo(){
-	var username = localStorage.getItem('username');
-	var UserPassword = localStorage.getItem('password');
-	alert('Your username is: '+username);
-	alert('Your password is: '+UserPassword);
-}
 function ShowStats(){
 	var lang = window.navigator.language;
 	var syst = window.navigator.platform;
-	alert('Info! These stats are collected from JavaScript!');
+	alert('Info! These stats afterwards are collected from JavaScript!');
 	alert(' Stats: \n Language: '+lang+' \n Platform: '+syst+' \n Cookies enabled: '+window.navigator.cookieEnabled+' \n Online: '+window.navigator.onLine+' \n Vendor: '+window.navigator.vendor+' \n User Agent: '+window.navigator.userAgent);
+}
+function showLS(){
+	alert('Info! We use local storage to remember your choices of you background image and background color!');
 }
 function updateLoadSpeed(){
 	document.getElementById('loadingDiv').style.animation='spin '+document.getElementById('loadSpeed').value+'s linear infinite';
-}
-function toggleDM(){
-	document.body.classList.toggle('darkMode');
-}
-function cookieList(){
-	var wn=window.open('about:blank', 'popup', 'None');
-	wn.document.write('Cookies: \n_gads \nCookies enable?: '+window.navigator.cookieEnabled);
 }
 function openC(){
 	window.open('https://stuff-web.xyz/mathCalculator');
@@ -336,6 +326,12 @@ function load(){
 	}else{
 		document.body.style.backgroundColor=bckClr;
 	}
+	var txtClr=localStorage.getItem('txtClr');
+	if (txtClr=='' || txtClr==null){
+		document.body.style.color="#000";
+	}else{
+		document.body.style.color=txtClr;
+	}
 }
 function placeImg(){
 	var imgLink=document.getElementById('url').value;
@@ -354,4 +350,13 @@ function setColor(){
 function clearColor(){
 	document.body.style.backgroundColor="#CCC";
 	localStorage.setItem('bckClr', '');
+}
+function setColorTxt(){
+	var txtColor=document.getElementById('txtClr').value;
+	document.body.style.color=txtColor;
+	localStorage.setItem('txtClr', txtColor);
+}
+function clearColorTxt(){
+	document.body.style.color="#CCC";
+	localStorage.setItem('txtClr', '');
 }
