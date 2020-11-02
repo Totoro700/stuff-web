@@ -1,357 +1,292 @@
-//Variables
-var memory = [];
-var align = 1;
-var collapse = 0;
-//Define functions
-/** Reload **/
-function Reload(){
-	//Confirm if user want to reload
-	var x = confirm('Are you sure you want to reload site? Data you inputed may not be saved');
-	if (x){
-		//Reload
-		location.reload();
-	}else{
-		alert('Click OK to continue');
-	}
-}
-/********Google and Microsoft********/
-//Opens Google's home page
-function Google(){
-	window.open('https://google.com');
-}
-//Opens Microsoft's home page
-function Microsoft(){
-	window.open('https://microsoft.com');
-}
-function Ask(){
-	var x = prompt('What\'s your name?'); 
-	var x='Your name is : \n'+x; 
-	document.getElementById('returnValue').innerText=x;
-}
-/********Links********/
-//Redirect with link
-function Redirect(){
-	var z=document.getElementById('RLink').value; 
-	document.write('Redirecting you to '+z+' . Please wait a few seconds. If you are not being redirected within 10 seconds, please reload the page'); 
-	setTimeout(function(){location=z;},0);}
-//Open tab/page with link
-function Open(){
-	var OLink=document.getElementById('Olink').value; 
-	window.open(OLink);
-}
-//Open blank popup
-function Popup(){
-	window.open('about:blank', 'popup', 'None');
-}
-//Open popup with link
-function OpenPopup(){
-	var toOpen=document.getElementById('PopupLink').value; 
-	window.open(toOpen, 'popup', 'None');
-}
-/***********Memory functions***********/
-function MemorySave(){
-	memory.push(' '+document.getElementById('ans').innerText);
-}
-function MemoryRecall(){
-	document.getElementById('ans').innerText=memory;
-}
-function MemoryClear(){
-	memory = [];
-}
-function MathClear(){
-	//Clear
-	document.getElementById('ans').innerText=null;
-	document.getElementById('piAns').innerText=null;
-	document.getElementById('radAns').innerText=null;
-	document.getElementById('degAns').innerText=null;
-}
-/********Content alignment********/
-//Left
-function Left(){
-	document.getElementById('Body').style.textAlign='left';
-	document.getElementById('table').style.marginLeft='0';
-	document.getElementById('table').style.marginRight='auto';
-	document.getElementById('CurrentAlignment').innerText='Alignment: Left';
-	align = 0;
-}
-//Right
-function Right(){
-	document.getElementById('Body').style.textAlign='right';
-	document.getElementById('table').style.marginLeft='auto';
-	document.getElementById('table').style.marginRight='0';
-	document.getElementById('CurrentAlignment').innerText='Alignment: Right';
-	align = 2;
-}
-//Center
-function Center(){
-	document.getElementById('Body').style.textAlign='center';
-	document.getElementById('table').style.marginLeft='auto';
-	document.getElementById('table').style.marginRight='auto';
-	document.getElementById('CurrentAlignment').innerText='Alignment: Center';
-	align = 1;
-}
-//Alignment random
-function Random(){
-	//Sets a random number
-	var aR = Math.floor(Math.random()*3)+1;
-	//Checks the current alignment
-	if (aR==1){
-		Center()
-	} else if (aR==2){
-		Right()
-	} else if (aR==3){
-		Left()
-	}
-}
-//Align Next
-function AlignNext(){
-	//Checks the current alignment with the align variable
-	if (align==0){
-		Center();
-	}else if (align==1){
-		Right();
-	}else{
-		Left();
-	}
-}
-//Align Previous
-function AlignPrev(){
-	//Checks the current alignment with the align variable
-	if (align==0){
-		Right();
-	}else if (align==1){
-		Left();
-	}else{
-		Center();
-	}
-}
-/***********Math***********/
-//Math functions
-function math(){
-	//Get Numbers
-	var numOne=parseInt(document.getElementById('numOne').value); 
-	var numTwo=parseInt(document.getElementById('numTwo').value); 
-	//Get selected operation
-	var s=document.getElementById('select').value;
-	//Check & Calculate
-	if(s=='p'){
-		//Addtion
-		document.getElementById('ans').innerText=numOne+numTwo;
-	}else if(s=='s'){
-		//Subtraction
-		document.getElementById('ans').innerText=numOne-numTwo;
-	}else if(s=='m'){
-		//Multiplication
-		document.getElementById('ans').innerText=numOne*numTwo;
-	}else if(s=='d'){
-		//Division
-		document.getElementById('ans').innerText=numOne/numTwo;
-	}else if(s=='pow'){
-		//To the power of
-		document.getElementById('ans').innerText=Math.pow(numOne, numTwo);
-	}else if(s=='mod'){
-		//Modulus
-		document.getElementById('ans').innerText=numOne%numTwo;
-	}else if(s=='exp'){
-		//Exponetial
-		document.getElementById('ans').innerText=numOne**numTwo;
-	}else if(s=='sqrt'){
-		//Square root
-		document.getElementById('ans').innerText=Math.sqrt(numOne);
-	}else if(s=='sin'){
-		//Sine
-		document.getElementById('ans').innerText=Math.sin(numOne);
-	}else if(s=='cos'){
-		//Cosine
-		document.getElementById('ans').innerText=Math.cos(numOne);
-	}else if(s=='tan'){
-		//Tangent
-		document.getElementById('ans').innerText=Math.tan(numOne);
-	}else if(s=='asin'){
-		//Arcsine
-		document.getElementById('ans').innerText=Math.asin(numOne);
-	}else if(s=='acos'){
-		//Arccosine
-		document.getElementById('ans').innerText=Math.acos(numOne);
-	}else if(s=='atan'){
-		//Arctangent
-		document.getElementById('ans').innerText=Math.atan(numOne);
-	}else if(s=='log'){
-		//Logistic
-		document.getElementById('ans').innerText=Math.log(numOne);
-	}else if(s=='bin'){
-		//Binary
-		document.getElementById('ans').innerText=numOne.toString(2);
-	}else if(s=='abs'){
-		//Absolute value
-		document.getElementById('ans').innerText=Math.abs(numOne);
-	}else if(s=='rnd'){
-		//Round
-		document.getElementById('ans').innerText=Math.round(numOne);
-	}else if(s=='flr'){
-		//Floor
-		document.getElementById('ans').innerText=Math.floor(numOne);
-	}else if(s=='ceil'){
-		//Ceiling
-		document.getElementById('ans').innerText=Math.ceil(numOne);
-	}else if(s=='e'){
-		//Euler's number
-		document.getElementById('ans').innerText=Math.E;
-	}else if(s=='sinh'){
-		//Hyperbolic sine
-		document.getElementById('ans').innerText=Math.sinh(numOne);
-	}else if(s=='cosh'){
-		//Hyperbolic cosine
-		document.getElementById('ans').innerText=Math.cosh(numOne);
-	}else if(s=='tanh'){
-		//Hyperbolic tangent
-		document.getElementById('ans').innerText=Math.tanh(numOne);
-	}else if(s=='asinh'){
-		//Hyperbolic arcsine
-		document.getElementById('ans').innerText=Math.asinh(numOne);
-	}else if(s=='acosh'){
-		//Hyperbolic arccosine
-		document.getElementById('ans').innerText=Math.acosh(numOne);
-	}else if(s=='atanh'){
-		//Hyperbolic arctangent
-		document.getElementById('ans').innerText=Math.atanh(numOne);
-	}else if(s=='cbrt'){
-		//Cubic root
-		document.getElementById('ans').innerText=Math.cbrt(numOne);
-	}else if(s=='ea'){
-		//Add by Euler's number
-		document.getElementById('ans').innerText=Math.E+numOne;
-	}else if(s=='es'){
-		//Subtract by Euler's number
-		document.getElementById('ans').innerText=numOne-Math.E;
-	}else if(s=='em'){
-		//Multiply by Euler's number
-		document.getElementById('ans').innerText=Math.E*numOne;
-	}else if(s=='ed'){
-		//Divide by Euler's number
-		document.getElementById('ans').innerText=numOne/Math.E;
-	}else if(s=='nan'){
-		//Is Not a Number?
-		if (isNaN(numOne)){
-			document.getElementById('ans').innerText=numOne+' is not a number(NaN)';
-		}else{
-			document.getElementById('ans').innerText=numOne+' is a number';
-		}
-	}
-}
-//Pi
-function Pi(){
-	var piCont=document.getElementById('piAns').innerText;
-	if (piCont==null || piCont==''){
-		document.getElementById('piAns').innerText='1 Pi ≈ 3.1415926535897932384626433832795028841971693993751058209749445923\n078164062862089986280348253421170679';
-	}else{
-		document.getElementById('piAns').innerText='';
-	}	
-}
-//Radians
-function Rad(){
-	var radCont=document.getElementById('radAns').innerText;
-	if (radCont==null || radCont==''){
-		document.getElementById('radAns').innerText='1 Radian ≈ '+57.2958+' Degrees(Deg)';
-	}else{
-		document.getElementById('radAns').innerText='';
-	}
-}
-//Degrees
-function Deg(){
-	var degCont=document.getElementById('degAns').innerText;
-	if (degCont==null || degCont==''){
-		document.getElementById('degAns').innerText='1 Degree ≈ '+0.0174533+' Radians(Rad)';
-	}else{
-		document.getElementById('degAns').innerText='';
-	}
-}
-/***********Other***********/
-function Run(){
-	var rs=document.getElementById('ACPselect').value;
-	//Check the selected function
-	if (rs=='a'){
-		//Alert
-		alert(document.getElementById('acpstr').value);
-	}else if (rs=='c'){
-		//Confirm
-		var alpha = confirm(document.getElementById('acpstr').value);
-		if (alpha){
-			//The user clicked OK
-			document.getElementById('returnValue').innerText='You clicked OK';
-		}else{
-			//The user clicked Cancel
-			document.getElementById('returnValue').innerText='You clicked Cancel';
-		}
-	}else if (rs=='p'){
-		//Prompt
-		var alpha = prompt(document.getElementById('acpstr').value, document.getElementById('acpstrt').value);
-		document.getElementById('returnValue').innerText=alpha;
-	}else if (rs=='p2'){
-		Ask();
-	}
-}
-function randomStr(){
-	document.getElementById('ranStr').innerText=Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15);
-}
-function ReqInfo(){
-	var username = localStorage.getItem('username');
-	var UserPassword = localStorage.getItem('password');
-	alert('Your username is: '+username);
-	alert('Your password is: '+UserPassword);
-}
-function ShowStats(){
-	var lang = window.navigator.language;
-	var syst = window.navigator.platform;
-	alert('Info! These stats are collected from JavaScript!');
-	alert(' Stats: \n Language: '+lang+' \n Platform: '+syst+' \n Cookies enabled: '+window.navigator.cookieEnabled+' \n Online: '+window.navigator.onLine+' \n Vendor: '+window.navigator.vendor+' \n User Agent: '+window.navigator.userAgent);
-}
-function updateLoadSpeed(){
-	document.getElementById('loadingDiv').style.animation='spin '+document.getElementById('loadSpeed').value+'s linear infinite';
-}
-function toggleDM(){
-	document.body.classList.toggle('darkMode');
-}
-function cookieList(){
-	var wn=window.open('about:blank', 'popup', 'None');
-	wn.document.write('Cookies: \n_gads \nCookies enable?: '+window.navigator.cookieEnabled);
-}
-function openC(){
-	window.open('https://stuff-web.xyz/mathCalculator');
-}
-function openCPopup(){
-	window.open('https://stuff-web.xyz/mathCalculator', 'popup', 'width=500,height=500');
-}
-function load(){
-	Center();
-	var imgUrl=localStorage.getItem('imgUrl');
-	if (imgUrl=='' || imgUrl==null){
-		document.body.style.backgroundColor="#CCC";
-	}else{
-		document.body.style.backgroundImage="url('"+imgUrl+"')";
-	}
-	var bckClr=localStorage.getItem('bckClr');
-	if (bckClr=='' || bckClr==null){
-		document.body.style.backgroundColor="#CCC";
-	}else{
-		document.body.style.backgroundColor=bckClr;
-	}
-}
-function placeImg(){
-	var imgLink=document.getElementById('url').value;
-	document.body.style.backgroundImage="url('"+imgLink+"')";
-	localStorage.setItem('imgUrl', imgLink);
-}
-function clearImg(){
-	document.body.style.backgroundImage="url('')";
-	localStorage.setItem('imgUrl', '');
-}
-function setColor(){
-	var color=document.getElementById('bckClr').value;
-	document.body.style.backgroundColor=color;
-	localStorage.setItem('bckClr', color);
-}
-function clearColor(){
-	document.body.style.backgroundColor="#CCC";
-	localStorage.setItem('bckClr', '');
-}
+<!DOCTYPE html>
+<html>
+<head>
+<!--HEAD-->
+<meta charset='utf-8'>
+<title>Stuff</title>
+<link rel='stylesheet' type='text/CSS' href='style.css' async>
+<script src='script.js' async></script>
+<noscript>JavaScript is disabled! Many functions will not operate without JavaScript. Please make sure that you enable JavaScript for full functions.</noscript>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+</head>
+<body id='Body' onload='load()'>
+<!--BODY-->
+<div id='content'>
+<div id='nav'>
+	<a href='index.html' style='float: left;'><h1 style='font-size:100px;text-align:center;'>Stuff</h1></a>
+	<ul>
+		<li><a href='tutorials.html' style='float:right;clear:right;'><h2>Tutorials</h2></a></li>
+		<li><a href='mathCalculator.html' style='float:right;clear:right;'><h2>Math</h2></a></li>
+		<li><a href='about.html' style='float:right;clear:right;'><h2>About</h2></a></li>
+		<li><a href='donate.html' style='float:right;clear:right;'><h2>Donate</h2></a></li>
+	</ul>
+</div>
+<hr style='clear: both;'>
+<br>
+<br>
+<hr>
+<br>
+<br>
+<table id='table'>
+<!--TABLE-->
+	<tr>
+		<th></th>
+		<th>HTML</th>
+		<th>CSS</th>
+		<th>JavaScript(JS)</th>
+	</tr>
+	<tr>
+		<th>Special Characters</th>
+		<td> < > / ! </td>
+		<td> { } # . , : ; </td>
+		<td> ( ) [ ] { } ; . = </td>
+	</tr>
+	<tr>
+		<th>Common Keywords</th>
+		<td> !DOCTYPE html body head title script style src href </td>
+		<td> margin padding border color backgrond-color z-index margin-left margin-right text-align </td>
+		<td> function var const document getElementById window localStorage if else Math null undefined </td>
+	</tr>
+	<tr>
+		<th>File Endings</th>
+		<td> .html </td>
+		<td> .css </td>
+		<td> .js </td>
+	</tr>
+	<tr>
+		<th>Use</th>
+		<td> Content of the webpage </td>
+		<td> Color and style of the webpage </td>
+		<td> Functions and interactiveness of the webpage </td>
+	</tr>
+	<tr>
+		<th>Stands for</th>
+		<td> <strong>H</strong>yper<strong>t</strong>ext <strong>M</strong>arkup <strong>L</strong>anguage </td>
+		<td> <strong>C</strong>ascading <strong>S</strong>tyle <strong>S</strong>heets </td>
+		<td> <strong>J</strong>ava<strong>S</strong>cript </td>
+	</tr>
+</table>
+<br>
+<hr>
+<br>
+<h1>Example Html</h1>
+<h1>Heading</h1>
+<p>Paragraph text <b>BOLD TEXT</b> <i>Italic text</i> <em>Empasized text</em> <sub>Subscript</sub> <sup>Superscript</sup></p>
+<br>
+<hr>
+<br>
+<br>
+<br>
+<br>
+<br>
+<hr>
+<button onclick='Google()' id='ButtonGoogle'>Google's home page</button>
+<button onclick='Microsoft()' id='ButtonMicrosoft'>Microsoft's home page</button>
+<hr>
+<div id='Cursors'>
+<h2>Cursors type</h2>
+	<button onclick='Reload()' class='ButtonDefault' style='cursor: wait;'>Reload site</button>
+	<button style='cursor:wait;' class='ButtonDefault'>Wait</button>
+	<button style='cursor:crosshair;' class='ButtonDefault'>Cross</button>
+	<button style='cursor:None;' class='ButtonDefault'>None</button>
+	<button class='ButtonDefault'>Regular</button>
+	<button style='cursor:pointer;' class='ButtonDefault'>Pointer</button>
+	<button style='cursor:progress;' class='ButtonDefault'>Progress</button>
+	<button style='cursor:cell;' class='ButtonDefault'>Cell</button>
+	<button style='cursor:text;' class='ButtonDefault'>Text</button>
+	<button style='cursor:vertical-text;' class='ButtonDefault'>Vertical Text</button>
+	<button style='cursor:alias;' class='ButtonDefault'>Alias</button>
+	<button style='cursor:copy;' class='ButtonDefault'>Copy</button>
+	<button style='cursor:move;' class='ButtonDefault'>Move</button>
+	<button style='cursor:no-drop;' class='ButtonDefault'>No Drop</button>
+	<button style='cursor:not-allowed;' class='ButtonDefault'>Not Allowed</button>
+	<button style='cursor:all-scroll;' class='ButtonDefault'>All Scroll</button>
+	<button style='cursor:col-resize;' class='ButtonDefault'>Col-Resize</button>
+	<button style='cursor:row-resize;' class='ButtonDefault'>Row-Resize</button>
+	<button style='cursor:n-resize;' class='ButtonDefault'>North-Resize</button>
+	<button style='cursor:e-resize;' class='ButtonDefault'>East-Resize</button>
+	<button style='cursor:s-resize;' class='ButtonDefault'>South-Resize</button>
+	<button style='cursor:w-resize;' class='ButtonDefault'>West-Resize</button>
+</div>
+<hr>
+<br>
+<br>
+<br>
+<div id='Tools'>
+	<!--TOOLS-->
+	<h1>Tools</h1>
+	<hr>
+	<div id='MathDiv'>
+		<!--MATH-->
+		<h2>Math</h2>
+		<hr>
+		<div id='MainMathDiv'>
+		<input class='num' id='numOne' type='number' placeholder='Number One'>
+		<select id='select'>
+			<option value='p'>Addition(+)</option>
+			<option value='s'>Subtraction(-)</option>
+			<option value='m'>Multiplucation(*)</option>
+			<option value='d'>Division(/)</option>
+			<option value='abs'>Absolute value(|)[Abs]</option>
+			<option value='pow'>Exponent(^)</option>
+			<option value='mod'>Modulus(Mod)[%]</option>
+			<option value='exp'>Exponential</option>
+			<option value='sqrt'>Square root(Sqrt)[√]</option>
+			<option value='cbrt'>Cubic root(cbrt)</option>
+			<option value='sin'>Sine(Sin)</option>
+			<option value='cos'>Cosine(Cos)</option>
+			<option value='tan'>Tangent(Tan)</option>
+			<option value='sinh'>Hyperbolic Sine(Sinh)</option>
+			<option value='cosh'>Hyperbolic Cosine(Cosh)</option>
+			<option value='tanh'>Hyperbolic Tangent(Tanh)</option>
+			<option value='asin'>Arcsine(Asin)</option>
+			<option value='acos'>Arccosine(Acos)</option>
+			<option value='atan'>Arctangent(Atan)</option>
+			<option value='asinh'>Hyperbolic Arcsine(Asinh)</option>
+			<option value='acosh'>Hyperbolic Arccosine(Acosh)</option>
+			<option value='atanh'>Hyperbolic Arctangent(Atanh)</option>
+			<option value='log'>Logistic(Log)</option>
+			<option value='bin'>Binary(Bin)</option>
+			<option value='rnd'>Round</option>
+			<option value='flr'>Floor</option>
+			<option value='ceil'>Ceiling</option>
+			<option value='e'>Euler's number(e)</option>
+			<option value='ea'>Add by Euler's number</option>
+			<option value='es'>Subtract by Euler's number</option>
+			<option value='em'>Multiply by Euler's number</option>
+			<option value='ed'>Divide by Euler's number</option>
+			<option value='nan'>Not a Number? (NaN)</option>
+		</select>
+		<input class='num' id='numTwo' type='number' placeholder='Number Two'>
+		<p id='ans'></p>
+		<button id='CalculateMath' onclick='math()'>Calculate</button>
+		<br>
+		<button onclick='openC()' class='mathBtn'>Open this on another page</button>
+		<button onclick='openCPopup()' class='mathBtn'>Open this as a popup</button>
+		</div>
+		<hr>
+		<div id='MemoryDiv'>
+			<h5>Memory</h5>
+			<hr>
+			<button onclick='MemorySave()' class='Memory'>Memory Save (MS)</button>
+			<button onclick='MemoryRecall()' class='Memory'>Memory Recall (MR)</button>
+			<button onclick='MemoryClear()' class='Memory'>Memory Clear (MC)</button>
+			<hr>
+		</div>
+		<div id='OtherFuncDiv'>
+			<h5>Other functions</h5>
+			<hr>
+			<button onclick='Pi()' class='MathBtn'>Pi</button>
+			<p id='piAns'></p>
+			<hr>
+			<button onclick='Rad()' class='MathBtn'>Radian(Rad)</button>
+			<p id='radAns'></p>
+			<br>
+			<button onclick='Deg()' class='MathBtn'>Degree(Deg)</button>
+			<p id='degAns'></p>
+		</div>
+	</div>
+	<br>
+	<div id='ACP'>
+		<h3>Alert, Confirm, And Prompt</h3>
+		<br>
+		<input id='acpstr'>
+		<hr>
+		<select id='ACPselect'>
+			<option value='a'>Alert</option>
+			<option value='c'>Confirm</option>
+			<option value='p'>Prompt</option>
+			<option value='p2'>Prompt 2</option>
+		</select>
+		<hr>
+		<input id='acpstrt'>
+		<hr>
+		<button onclick='Run()' id='RunButton'>Run</button>
+		<hr>
+		<p id='returnValue'></p>
+	</div>
+	<hr>
+	<div id='Links'>
+		<!--LINKS & PAGES-->
+		<h3>Links</h3>
+		<hr>
+		<input id='RLink'>
+		<button onclick='Redirect()' id='RedirectButton'>Redirect</button>
+		<hr>
+		<input id='Olink'>
+		<button onclick='Open()' id='OpenLinkButton'>Open</button>
+		<hr>
+		<h3>Popups</h3>
+		<button onclick='Popup()'>Open Popup</button>
+		<hr>
+		<input id='PopupLink'>
+		<hr>
+		<button onclick='OpenPopup()'>Open Popup with link</button>
+	</div>
+	<hr>
+	<div id='OtherDiv'>
+		<h4>Other</h4>
+		<p id='ranStr'></p>
+		<button onclick='randomStr()'>Generate random string</button>
+		<hr>
+		<h2>Loading sign</h2>
+		<div id='loadingDiv'></div>
+		<p>Turn speed: </p>
+		<input type='number' id='loadSpeed' min='0.001' max='100'>
+		<button onclick='updateLoadSpeed()'>Update</button>
+		<br>
+		<br>
+		<br>
+		<h2>Login</h2>
+		<p>Click <a href='login.html'>here</a></p>
+	</div>
+</div>
+<hr>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<div id='alignment'>
+	<h5>Alignment</h5>
+	<button onclick='Left()' class='Alignment'>Left</button>
+	<button onclick='Center()' class='Alignment'>Center</button>
+	<button onclick='Right()' class='Alignment'>Right</button>
+	<br>
+	<button onclick='Random()' class='Alignment'>Random</button>
+	<br>
+	<button onclick='AlignNext()' class='Alignment'>Next</button>
+	<button onclick='AlignPrev()' class='Alignment'>Previous</button>
+	<br>
+	<p id='CurrentAlignment'>Alignment: Center</p>
+	<br>
+</div>
+<div id='DataDiv'>
+	<h5>Data</h5>
+	<button onclick='ShowStats()'>Request stats</button>
+	<button onclick='cookieList()'>Cookies in use</button><br>
+	<div id='backgroundCus'>
+		<p>Background</p><br>
+		<label for='url'>Image URL: </label>
+		<input type='url' name='url' width='500' id='url'>
+		<button onclick='placeImg()'>Set image</button>
+		<button onclick='clearImg()'>Clear image</button><br>
+		<h6>Color</h6>
+		<input type='color' id='bckClr'><br>
+		<button onclick='setColor()'>Set color</button>
+		<button onclick='clearColor()'>Clear color</button>
+	</div>
+</div>
+<div id='footer'>
+<button onclick='toggleDM()'>😎Toggle dark mode😎</button>
+<br>
+<p>
+<a href='about.html'>About</a> | <a href='donate.html'>Donate</a> | <a href='bugReport.html'>Report a problem</a></p>
+</div>
+<br>
+<br>
+<br>
+</body>
+</html>
