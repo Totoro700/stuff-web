@@ -4,7 +4,7 @@ th,td {padding:10px; text-align:center;}
 h1 {color:#707070;}
 h5 {color:green;}
 button {background-color:#FFF;}
-body {background-color:#CCC;font-family:ink free;padding:5px;}
+body {background-color:#CCC;font-family:ink free;padding:5px;color:#00F;}
 div {margin:5px;}
 ul {list-style-type:none;}
 /********** Classes **********/
@@ -12,42 +12,35 @@ ul {list-style-type:none;}
 .Memory {padding:2px;margin:5px;border:3px solid blue;background-color:#FFF;}
 .MathBtn {padding:2px;margin:5px;border:3px solid green;}
 .Alignment {padding:2px;margin:5px;border:3px solid blue;}
-.darkMode {background-color:#000;font-family:ink free;padding:5px;color:#FFF;}
-.whiteMode {background-color:#CCC;font-family:ink free;padding:5px;}
+.num {padding:2px;border:2.5px solid blue;margin:5px;}
+.mathBtn {padding:2px;margin:5px;border:3px solid blue;}
 /********** Ids **********/
 #content {border:2.5px solid black;padding:10px;}
-/* Google & Microsoft */
 #ButtonGoogle {color:#FF0000;}
 #ButtonMicrosoft {color:navy;}
-/* Alert, confirm, & prompt */
 #ACPselect {border:2.5px solid red;padding:2px;}
 #acpstr {border:5px solid red;padding:2px;}
 #acpstrt {border:5px solid green;padding:2px;}
 #RunButton {border:5px solid blue;padding:2px;}
-/* Math */
 #MathDiv {border:2.5px solid green;padding:5px;}
-.num {padding:2px;border:2.5px solid blue;margin:5px;}
-.mathBtn {padding:2px;margin:5px;border:3px solid blue;}
 #select {padding:2px;border:2.5px solid black;margin:5px;}
 #CalculateMath {padding:2px;margin:5px;border:3px solid red;}
 #MainMathDiv {border:2.5px solid red;padding:5px;}
 #MemoryDiv {border:2.5px solid yellow;padding:5px;}
 #OtherFuncDiv {border:2.5px solid blue;padding:5px;}
-/* Links & Popups */
 #Links {border:2.5px solid blue;padding:5px;}
 #RedirectButton {cursor:pointer;background-color:#FFF;}
 #RLink {margin:10px;padding:2px;border:2.5px solid blue;}
 #Olink {padding:2px;margin:10px;border:2.5px solid blue;}
 #PopupLink {padding:3px;border:3px solid blue;}
 #OpenPopupButtonT {padding:3px;border:3px solid blue;}
-/* Other */
 #Cursors {border:2.5px solid yellow;padding:5px;}
 #alignment {padding:5px;border:3px solid black;}
 #OtherDiv {border:2.5px solid yellow;padding:5px;}
 #DataDiv {border:2.5px solid green;padding:5px;}
 #backgroundCus {border:2.5px solid red;padding:5px;}
 #url {padding:2px;border:2.5px solid blue;margin:5px;}
-/* Loading sign */
 #loadingDiv {animation:spin 0.5s linear infinite;border:6px solid #F3F3F3;border-radius:50%;border-top:6px solid #3498DB;margin-left:auto;margin-right:auto;width:50px;height:50px;}
-@keyframes spin{0% {transform:rotate(0deg);}100% {transform:rotate(360deg);}}
 #loadSpeed {padding:2px;border:2.5px solid blue;margin:5px;}
+/********** Other **********/
+@keyframes spin{0% {transform:rotate(0deg);}100% {transform:rotate(360deg);}}
