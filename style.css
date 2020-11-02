@@ -45,6 +45,8 @@ ul {list-style-type:none;}
 #alignment {padding:5px;border:3px solid black;}
 #OtherDiv {border:2.5px solid yellow;padding:5px;}
 #DataDiv {border:2.5px solid green;padding:5px;}
+#backgroundCus {border:2.5px solid red;padding:5px;}
+#url {padding:2px;border:2.5px solid blue;margin:5px;}
 /* Loading sign */
 #loadingDiv {animation:spin 0.5s linear infinite;border:6px solid #F3F3F3;border-radius:50%;border-top:6px solid #3498DB;margin-left:auto;margin-right:auto;width:50px;height:50px;}
 @keyframes spin{0% {transform:rotate(0deg);}100% {transform:rotate(360deg);}}
