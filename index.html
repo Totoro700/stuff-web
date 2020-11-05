@@ -8,6 +8,7 @@
 <script src='script.js' async></script>
 <noscript>JavaScript is disabled! Many functions will not operate without JavaScript. Please make sure that you enable JavaScript for full functions.</noscript>
 <meta name='viewport' content='width=device-width, initial-scale=1'>
+<link rel='icon' type='image' href='about:blank'>
 </head>
 <body id='Body' onload='load()'>
 <!--BODY-->
@@ -37,7 +38,7 @@
 	</tr>
 	<tr>
 		<th>Special Characters</th>
-		<td> < > / ! </td>
+		<td> &lt;&gt; / ! </td>
 		<td> { } # . , : ; </td>
 		<td> ( ) [ ] { } ; . = </td>
 	</tr>
@@ -184,6 +185,9 @@
 			<br>
 			<button onclick='Deg()' class='MathBtn'>Degree(Deg)</button>
 			<p id='degAns'></p>
+			<br>
+			<button onclick='e()' class='MathBtn'>Euler's number(E)</button>
+			<p id='eAns'></p>
 		</div>
 	</div>
 	<br>
@@ -283,6 +287,7 @@
 		<input type='url' name='url' width='500' id='url'>
 		<button onclick='placeImg()'>Set image</button>
 		<button onclick='clearImg()'>Clear image</button><br>
+		<br>
 		<h6>Color</h6>
 		<input type='color' id='bckClr'><br>
 		<button onclick='setColor()'>Set color</button>
