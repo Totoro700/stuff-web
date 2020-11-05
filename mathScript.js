@@ -1,3 +1,4 @@
+var memory = [];
 function math(){
 	var numOne=parseInt(document.getElementById('numOne').value);
 	var numTwo=parseInt(document.getElementById('numTwo').value);
