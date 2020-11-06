@@ -2,17 +2,22 @@
 <html>
 <head>
 <!--HEAD-->
+<!--META-->
 <meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<!--TITLE-->
 <title>Stuff</title>
+<!--LINK-->
 <link rel='stylesheet' type='text/CSS' href='style.css' async>
+<link rel='icon' type='image' href='Images/logo.png'>
+<!--SCRIPT-->
 <script src='script.js' async></script>
 <noscript>JavaScript is disabled! Many functions will not operate without JavaScript. Please make sure that you enable JavaScript for full functions.</noscript>
-<meta name='viewport' content='width=device-width, initial-scale=1'>
-<link rel='icon' type='image' href='Images/logo.png'>
 </head>
 <body id='Body' onload='load()'>
 <!--BODY-->
 <div id='content'>
+<!--NAV-->
 <div id='nav'>
 	<a href='index.html' style='float: left;'><h1 style='font-size:100px;text-align:center;'>Stuff</h1></a>
 	<ul>
@@ -81,10 +86,9 @@
 <br>
 <br>
 <br>
-<button onclick='Google()' id='ButtonGoogle'>Google's home page</button>
-<button onclick='Microsoft()' id='ButtonMicrosoft'>Microsoft's home page</button>
 <br>
 <div id='Cursors'>
+<!--CURSORS-->
 <h2>Cursors type</h2>
 	<button onclick='Reload()' class='ButtonDefault' style='cursor: wait;'>Reload site</button>
 	<button style='cursor:wait;' class='ButtonDefault'>Wait</button>
@@ -124,6 +128,7 @@
 		<div id='MainMathDiv'>
 		<input class='num' id='numOne' type='number' placeholder='Number One'>
 		<select id='select'>
+		<!--Select-->
 			<option value='p'>Addition(+)</option>
 			<option value='s'>Subtraction(-)</option>
 			<option value='m'>Multiplucation(*)</option>
@@ -166,6 +171,7 @@
 		<button onclick='openCPopup()' class='mathBtn'>Open this as a popup</button>
 		</div>
 		<br>
+		<!--MEMORY-->
 		<div id='MemoryDiv'>
 			<h5>Memory</h5>
 			<br>
@@ -237,6 +243,7 @@
 	</div>
 	<br>
 	<div id='OtherDiv'>
+	<!--OTHER-->
 		<h4>Other</h4>
 		<p id='ranStr'></p>
 		<button onclick='randomStr()'>Generate random string</button>
@@ -262,6 +269,7 @@
 <br>
 <br>
 <div id='alignment'>
+	<!--ALIGNMENT-->
 	<h5>Alignment</h5>
 	<button onclick='Left()' class='Alignment'>Left</button>
 	<button onclick='Center()' class='Alignment'>Center</button>
@@ -276,12 +284,14 @@
 	<br>
 	<br>
 </div>
+<!--DATA-->
 <div id='DataDiv'>
 	<h5>Data</h5>
 	<button onclick='ShowStats()'>Request stats</button>
 	<button onclick='showLS()'>How we use storage</button><br>
 	<br>
-	<div id='backgroundCus'>
+	<div id='cus'>
+	<!--CUSTOMIZATION-->
 		<p>Background</p><br>
 		<label for='url'>Image URL: </label>
 		<input type='url' name='url' width='500' id='url'>
@@ -299,6 +309,7 @@
 		<br>
 	</div>
 </div>
+<!--FOOTER-->
 <div id='footer'>
 <br>
 <p>
