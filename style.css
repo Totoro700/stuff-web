@@ -7,6 +7,9 @@ button {background-color:#FFF;}
 body {background-color:#CCC;font-family:ink free;padding:5px;color:#00F;}
 div {margin:5px;}
 ul {list-style-type:none;}
+a:link {color:blue;}
+a:visited {color:red;}
+
 /********** Classes **********/
 .ButtonDefault {color:#0000FF;}
 .Memory {padding:2px;margin:5px;border:3px solid blue;background-color:#FFF;}
