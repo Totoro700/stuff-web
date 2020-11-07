@@ -7,6 +7,7 @@ button {background-color:#FFF;}
 body {background-color:#CCC;font-family:ink free;padding:5px;color:#00F;}
 div {margin:5px;}
 ul {list-style-type:none;}
+a {text-decotration:none;}
 a:link {color:blue;}
 a:visited {color:red;}
 a:hover {color:yellow;}
