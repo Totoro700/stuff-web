@@ -9,7 +9,8 @@ div {margin:5px;}
 ul {list-style-type:none;}
 a:link {color:blue;}
 a:visited {color:red;}
-
+a:hover {color:yellow;}
+a:active {color:green;}
 /********** Classes **********/
 .ButtonDefault {color:#0000FF;}
 .Memory {padding:2px;margin:5px;border:3px solid blue;background-color:#FFF;}
