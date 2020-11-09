@@ -19,11 +19,24 @@ function charCount(){
 	}
 	
 }
+function load(){
+	var txt=localStorage.getItem('text');
+	if (txt==null || txt==undefined || txt==''){
+		document.getElementById('userTextArea').innerText='';
+	}else{
+		document.getElementById('userTextArea').innerText=txt;
+	}
+}
+function save(){
+	var txt=document.getElementById('userTextArea').value;
+	localStorage.setItem('text', txt)
+}
 </script>
 </head>
-<body style='background-color:#CCC;'>
-<textarea style='resize: both; margin: 0px; width: 1299px; height: 570px;' id='userTextArea'>Drag the corner on the bottom right to adjust the text area</textarea>
-<button onclick='charCount()'>Count characters</button>
+<body style='background-color:#CCC;' onload='load()'>
+<textarea style='resize: both; margin: 0px; width: 1299px; height: 570px;' id='userTextArea' onkeyup='save()'>
+</textarea>
+<button onclick='charCount()'>Count characters</button><br>
 <p id='chars'></p>
 </body>
 </html>
