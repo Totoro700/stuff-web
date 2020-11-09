@@ -1,11 +1,7 @@
-//Variables
 var memory = [];
 var align = 1;
 var collapse = 0;
-//Define functions
-/** Reload **/
 function Reload(){
-	//Confirm if user want to reload
 	var x = confirm('Are you sure you want to reload site? Data you inputed may not be saved');
 	if (x){
 		//Reload
@@ -14,58 +10,27 @@ function Reload(){
 		alert('Click OK to continue');
 	}
 }
-/********Google and Microsoft********/
-//Opens Google's home page
-function Google(){
-	window.open('https://google.com');
-}
-//Opens Microsoft's home page
-function Microsoft(){
-	window.open('https://microsoft.com');
-}
 function Ask(){
 	var x = prompt('What\'s your name?'); 
 	var x='Your name is : \n'+x; 
 	document.getElementById('returnValue').innerText=x;
 }
-/********Links********/
-//Redirect with link
 function Redirect(){
 	var z=document.getElementById('RLink').value; 
 	document.write('Redirecting you to '+z+' . Please wait a few seconds. If you are not being redirected within 10 seconds, please reload the page'); 
 	setTimeout(function(){location=z;},0);}
-//Open tab/page with link
 function Open(){
 	var OLink=document.getElementById('Olink').value; 
 	window.open(OLink);
 }
-//Open blank popup
-function Popup(){
-	window.open('about:blank', 'popup', 'None');
-}
-//Open popup with link
+function Popup(){window.open('about:blank', 'popup', 'None');}
 function OpenPopup(){
 	var toOpen=document.getElementById('PopupLink').value; 
 	window.open(toOpen, 'popup', 'None');
 }
-/***********Memory functions***********/
-function MemorySave(){
-	memory.push(' '+document.getElementById('ans').innerText);
-}
-function MemoryRecall(){
-	document.getElementById('ans').innerText=memory;
-}
-function MemoryClear(){
-	memory = [];
-}
-function MathClear(){
-	//Clear
-	document.getElementById('ans').innerText=null;
-	document.getElementById('piAns').innerText=null;
-	document.getElementById('radAns').innerText=null;
-	document.getElementById('degAns').innerText=null;
-}
-/********Content alignment********/
+function MemorySave(){memory.push(' '+document.getElementById('ans').innerText);}
+function MemoryRecall(){document.getElementById('ans').innerText=memory;}
+function MemoryClear(){memory = [];}
 //Left
 function Left(){
 	document.getElementById('Body').style.textAlign='left';
@@ -90,22 +55,17 @@ function Center(){
 	document.getElementById('CurrentAlignment').innerText='Alignment: Center';
 	align = 1;
 }
-//Alignment random
 function Random(){
-	//Sets a random number
 	var aR = Math.floor(Math.random()*3)+1;
-	//Checks the current alignment
 	if (aR==1){
-		Center()
+		Center();
 	} else if (aR==2){
-		Right()
+		Right();
 	} else if (aR==3){
-		Left()
+		Left();
 	}
 }
-//Align Next
 function AlignNext(){
-	//Checks the current alignment with the align variable
 	if (align==0){
 		Center();
 	}else if (align==1){
@@ -114,9 +74,7 @@ function AlignNext(){
 		Left();
 	}
 }
-//Align Previous
 function AlignPrev(){
-	//Checks the current alignment with the align variable
 	if (align==0){
 		Right();
 	}else if (align==1){
@@ -125,8 +83,6 @@ function AlignPrev(){
 		Center();
 	}
 }
-/***********Math***********/
-//Math functions
 function math(){
 	//Get Numbers
 	var numOne=parseInt(document.getElementById('numOne').value); 
@@ -239,31 +195,29 @@ function math(){
 		}
 	}
 }
-//Pi
 function Pi(){
 	var piCont=document.getElementById('piAns').innerText;
 	if (piCont==null || piCont==''){
 		document.getElementById('piAns').innerText='1 Pi ≈ 3.1415926535897932384626433832795028841971693993751058209749445923\n078164062862089986280348253421170679';
-	}else{
-		document.getElementById('piAns').innerText='';
-	}	
+	}else{document.getElementById('piAns').innerText='';}	
 }
-//Radians
 function Rad(){
 	var radCont=document.getElementById('radAns').innerText;
-	if (radCont==null || radCont==''){
-		document.getElementById('radAns').innerText='1 Radian ≈ '+57.2958+' Degrees(Deg)';
-	}else{
-		document.getElementById('radAns').innerText='';
-	}
-}
-//Degrees
+	if (radCont==null || radCont==''){document.getElementById('radAns').innerText='1 Radian ≈ '+57.2958+' Degrees(Deg)';}else{document.getElementById('radAns').innerText='';}}
 function Deg(){
 	var degCont=document.getElementById('degAns').innerText;
 	if (degCont==null || degCont==''){
 		document.getElementById('degAns').innerText='1 Degree ≈ '+0.0174533+' Radians(Rad)';
 	}else{
 		document.getElementById('degAns').innerText='';
+	}
+}
+function e(){
+	var eCont=document.getElementById('eAns').innerText;
+	if (eCont==null || eCont==''){
+		document.getElementById('eAns').innerText='Euler\'s number ≈ '+Math.E;
+	}else{
+		document.getElementById('eAns').innerText='';
 	}
 }
 /***********Other***********/
@@ -291,27 +245,15 @@ function Run(){
 		Ask();
 	}
 }
-function randomStr(){
-	document.getElementById('ranStr').innerText=Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15);
-}
+function randomStr(){document.getElementById('ranStr').innerText=Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15);}
 function ShowStats(){
-	var lang = window.navigator.language;
-	var syst = window.navigator.platform;
 	alert('Info! These stats afterwards are collected from JavaScript!');
-	alert(' Stats: \n Language: '+lang+' \n Platform: '+syst+' \n Cookies enabled: '+window.navigator.cookieEnabled+' \n Online: '+window.navigator.onLine+' \n Vendor: '+window.navigator.vendor+' \n User Agent: '+window.navigator.userAgent);
+	alert(' Stats: \n Language: '+window.navigator.language+' \n Platform: '+window.navigator.platform+' \n Cookies enabled: '+window.navigator.cookieEnabled+' \n Online: '+window.navigator.onLine+' \n Vendor: '+window.navigator.vendor+' \n User Agent: '+window.navigator.userAgent);
 }
-function showLS(){
-	alert('Info! We use local storage to remember your choices of you background image, background color, and others!');
-}
-function updateLoadSpeed(){
-	document.getElementById('loadingDiv').style.animation='spin '+document.getElementById('loadSpeed').value+'s linear infinite';
-}
-function openC(){
-	window.open('https://stuff-web.xyz/mathCalculator');
-}
-function openCPopup(){
-	window.open('https://stuff-web.xyz/mathCalculator', 'popup', 'width=500,height=500');
-}
+function showLS(){alert('Info! We use local storage to remember your choices of you background image, background color, and others!');}
+function updateLoadSpeed(){document.getElementById('loadingDiv').style.animation='spin '+document.getElementById('loadSpeed').value+'s linear infinite';}
+function openC(){window.open('https://stuff-web.xyz/mathCalculator');}
+function openCPopup(){window.open('https://stuff-web.xyz/mathCalculator', 'popup', 'width=500,height=500');}
 function load(){
 	Center();
 	var imgUrl=localStorage.getItem('imgUrl');
