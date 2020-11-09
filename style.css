@@ -3,15 +3,17 @@ table,th,td {border:5px solid blue;margin-left:auto;margin-right:auto;border-col
 th,td {padding:10px; text-align:center;}
 h1 {color:#707070;}
 h5 {color:green;}
-button {background-color:#FFF;}
+button {background-color:#FFF;border:2px solid black;}
 body {background-color:#CCC;font-family:ink free;padding:5px;color:#00F;}
 div {margin:5px;}
 ul {list-style-type:none;}
 a {text-decoration:none;}
+a:hover {color:red;}
 a:link {color:blue;}
-a:visited {color:red;}
-a:hover {color:yellow;}
-a:active {color:green;}
+a:visited {color:#00F;}
+ul {list-style-type:none;margin:0;padding:0;overflow:hidden;}
+li {float:left;}
+li a {display:block;color:white;text-align:center;padding:14px 16px;text-decoration:none;}
 /********** Classes **********/
 .ButtonDefault {color:#0000FF;}
 .Memory {padding:2px;margin:5px;border:3px solid blue;background-color:#FFF;}
@@ -21,6 +23,7 @@ a:active {color:green;}
 .mathBtn {padding:2px;margin:5px;border:3px solid blue;}
 /********** Ids **********/
 #content {border:2.5px solid black;padding:10px;}
+#mainNav {float:right;}
 #ButtonGoogle {color:#FF0000;}
 #ButtonMicrosoft {color:navy;}
 #ACPselect {border:2.5px solid red;padding:2px;}
@@ -43,7 +46,7 @@ a:active {color:green;}
 #alignment {padding:5px;border:3px solid black;}
 #OtherDiv {border:2.5px solid yellow;padding:5px;}
 #DataDiv {border:2.5px solid green;padding:5px;}
-#backgroundCus {border:2.5px solid red;padding:5px;}
+#cus {border:2.5px solid red;padding:5px;}
 #url {padding:2px;border:2.5px solid blue;margin:5px;}
 #loadingDiv {animation:spin 0.5s linear infinite;border:6px solid #F3F3F3;border-radius:50%;border-top:6px solid #3498DB;margin-left:auto;margin-right:auto;width:50px;height:50px;}
 #loadSpeed {padding:2px;border:2.5px solid blue;margin:5px;}
