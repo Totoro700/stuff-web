@@ -19,10 +19,18 @@ function charCount(){
 	}
 	
 }
+function save(){
+	var text = document.getElementById('userTextArea');
+	localStorage.setItem('notepadText', text);
+}
+function getText(){
+	var bText = localStorage.getItem('notepadText');
+	document.getElementById('userTextArea')=bText;
+}
 </script>
 </head>
-<body style='background-color:#CCC;'>
-<textarea style='resize: both; margin: 0px; width: 1299px; height: 570px;' id='userTextArea'>
+<body style='background-color:#CCC;' onload='getText'>
+<textarea style='resize: both; margin: 0px; width: 1299px; height: 570px;' id='userTextArea' onkeyup='save()'>
 </textarea><br>
 <button onclick='charCount()'>Count characters</button><br>
 <br>
