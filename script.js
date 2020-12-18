@@ -4,7 +4,7 @@ var collapse = 0;
 function Reload(){
 	var x = confirm('Are you sure you want to reload site? Data you inputed may not be saved');
 	if (x){
-		//Reload
+		// Reload
 		location.reload();
 	}else{
 		alert('Click OK to continue');
@@ -31,7 +31,7 @@ function OpenPopup(){
 function MemorySave(){memory.push(' '+document.getElementById('ans').innerText);}
 function MemoryRecall(){document.getElementById('ans').innerText=memory;}
 function MemoryClear(){memory = [];}
-//Left
+// Left
 function Left(){
 	document.getElementById('Body').style.textAlign='left';
 	document.getElementById('table').style.marginLeft='0';
@@ -39,7 +39,7 @@ function Left(){
 	document.getElementById('CurrentAlignment').innerText='Alignment: Left';
 	align = 0;
 }
-//Right
+// Right
 function Right(){
 	document.getElementById('Body').style.textAlign='right';
 	document.getElementById('table').style.marginLeft='auto';
@@ -47,7 +47,7 @@ function Right(){
 	document.getElementById('CurrentAlignment').innerText='Alignment: Right';
 	align = 2;
 }
-//Center
+// Center
 function Center(){
 	document.getElementById('Body').style.textAlign='center';
 	document.getElementById('table').style.marginLeft='auto';
@@ -84,110 +84,110 @@ function AlignPrev(){
 	}
 }
 function math(){
-	//Get Numbers
+	// Get Numbers
 	var numOne=parseInt(document.getElementById('numOne').value); 
 	var numTwo=parseInt(document.getElementById('numTwo').value); 
-	//Get selected operation
+	// Get selected operation
 	var s=document.getElementById('select').value;
-	//Check & Calculate
+	// Check & Calculate
 	if(s=='p'){
-		//Addtion
+		// Addtion
 		document.getElementById('ans').innerText=numOne+numTwo;
 	}else if(s=='s'){
-		//Subtraction
+		// Subtraction
 		document.getElementById('ans').innerText=numOne-numTwo;
 	}else if(s=='m'){
-		//Multiplication
+		// Multiplication
 		document.getElementById('ans').innerText=numOne*numTwo;
 	}else if(s=='d'){
-		//Division
+		// Division
 		document.getElementById('ans').innerText=numOne/numTwo;
 	}else if(s=='pow'){
-		//To the power of
+		// To the power of
 		document.getElementById('ans').innerText=Math.pow(numOne, numTwo);
 	}else if(s=='mod'){
-		//Modulus
+		// Modulus
 		document.getElementById('ans').innerText=numOne%numTwo;
 	}else if(s=='exp'){
-		//Exponetial
+		// Exponetial
 		document.getElementById('ans').innerText=numOne**numTwo;
 	}else if(s=='sqrt'){
-		//Square root
+		// Square root
 		document.getElementById('ans').innerText=Math.sqrt(numOne);
 	}else if(s=='sin'){
-		//Sine
+		// Sine
 		document.getElementById('ans').innerText=Math.sin(numOne);
 	}else if(s=='cos'){
-		//Cosine
+		// Cosine
 		document.getElementById('ans').innerText=Math.cos(numOne);
 	}else if(s=='tan'){
-		//Tangent
+		// Tangent
 		document.getElementById('ans').innerText=Math.tan(numOne);
 	}else if(s=='asin'){
-		//Arcsine
+		// Arcsine
 		document.getElementById('ans').innerText=Math.asin(numOne);
 	}else if(s=='acos'){
-		//Arccosine
+		// Arccosine
 		document.getElementById('ans').innerText=Math.acos(numOne);
 	}else if(s=='atan'){
-		//Arctangent
+		// Arctangent
 		document.getElementById('ans').innerText=Math.atan(numOne);
 	}else if(s=='log'){
-		//Logistic
+		// Logistic
 		document.getElementById('ans').innerText=Math.log(numOne);
 	}else if(s=='bin'){
-		//Binary
+		// Binary
 		document.getElementById('ans').innerText=numOne.toString(2);
 	}else if(s=='abs'){
-		//Absolute value
+		// Absolute value
 		document.getElementById('ans').innerText=Math.abs(numOne);
 	}else if(s=='rnd'){
-		//Round
+		// Round
 		document.getElementById('ans').innerText=Math.round(numOne);
 	}else if(s=='flr'){
-		//Floor
+		// Floor
 		document.getElementById('ans').innerText=Math.floor(numOne);
 	}else if(s=='ceil'){
-		//Ceiling
+		// Ceiling
 		document.getElementById('ans').innerText=Math.ceil(numOne);
 	}else if(s=='e'){
-		//Euler's number
+		// Euler's number
 		document.getElementById('ans').innerText=Math.E;
 	}else if(s=='sinh'){
-		//Hyperbolic sine
+		// Hyperbolic sine
 		document.getElementById('ans').innerText=Math.sinh(numOne);
 	}else if(s=='cosh'){
-		//Hyperbolic cosine
+		// Hyperbolic cosine
 		document.getElementById('ans').innerText=Math.cosh(numOne);
 	}else if(s=='tanh'){
-		//Hyperbolic tangent
+		// Hyperbolic tangent
 		document.getElementById('ans').innerText=Math.tanh(numOne);
 	}else if(s=='asinh'){
-		//Hyperbolic arcsine
+		// Hyperbolic arcsine
 		document.getElementById('ans').innerText=Math.asinh(numOne);
 	}else if(s=='acosh'){
-		//Hyperbolic arccosine
+		// Hyperbolic arccosine
 		document.getElementById('ans').innerText=Math.acosh(numOne);
 	}else if(s=='atanh'){
-		//Hyperbolic arctangent
+		// Hyperbolic arctangent
 		document.getElementById('ans').innerText=Math.atanh(numOne);
 	}else if(s=='cbrt'){
-		//Cubic root
+		// Cubic root
 		document.getElementById('ans').innerText=Math.cbrt(numOne);
 	}else if(s=='ea'){
-		//Add by Euler's number
+		// Add by Euler's number
 		document.getElementById('ans').innerText=Math.E+numOne;
 	}else if(s=='es'){
-		//Subtract by Euler's number
+		// Subtract by Euler's number
 		document.getElementById('ans').innerText=numOne-Math.E;
 	}else if(s=='em'){
-		//Multiply by Euler's number
+		// Multiply by Euler's number
 		document.getElementById('ans').innerText=Math.E*numOne;
 	}else if(s=='ed'){
-		//Divide by Euler's number
+		// Divide by Euler's number
 		document.getElementById('ans').innerText=numOne/Math.E;
 	}else if(s=='nan'){
-		//Is Not a Number?
+		// Is Not a Number?
 		if (isNaN(numOne)){
 			document.getElementById('ans').innerText=numOne+' is not a number(NaN)';
 		}else{
@@ -223,22 +223,22 @@ function e(){
 /***********Other***********/
 function Run(){
 	var rs=document.getElementById('ACPselect').value;
-	//Check the selected function
+	// Check the selected function
 	if (rs=='a'){
-		//Alert
+		// Alert
 		alert(document.getElementById('acpstr').value);
 	}else if (rs=='c'){
-		//Confirm
+		// Confirm
 		var alpha = confirm(document.getElementById('acpstr').value);
 		if (alpha){
-			//The user clicked OK
+			// The user clicked OK
 			document.getElementById('returnValue').innerText='You clicked OK';
 		}else{
-			//The user clicked Cancel
+			// The user clicked Cancel
 			document.getElementById('returnValue').innerText='You clicked Cancel';
 		}
 	}else if (rs=='p'){
-		//Prompt
+		// Prompt
 		var alpha = prompt(document.getElementById('acpstr').value, document.getElementById('acpstrt').value);
 		document.getElementById('returnValue').innerText=alpha;
 	}else if (rs=='p2'){
@@ -252,8 +252,8 @@ function ShowStats(){
 }
 function showLS(){alert('Info! We use local storage to remember your choices of you background image, background color, and others!');}
 function updateLoadSpeed(){document.getElementById('loadingDiv').style.animation='spin '+document.getElementById('loadSpeed').value+'s linear infinite';}
-function openC(){window.open('https://stuff-web.xyz/mathCalculator');}
-function openCPopup(){window.open('https://stuff-web.xyz/mathCalculator', 'popup', 'width=500,height=500');}
+function openC(){window.open('https:// stuff-web.xyz/mathCalculator');}
+function openCPopup(){window.open('https:// stuff-web.xyz/mathCalculator', 'popup', 'width=500,height=500');}
 function load(){
 	Center();
 	var imgUrl=localStorage.getItem('imgUrl');
