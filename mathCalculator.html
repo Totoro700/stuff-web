@@ -1,90 +1,90 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'>
-<title>Math Calculator</title>
-<link rel='icon' type='image' href='Images/logo.png'>
-<link rel='stylesheet' type='text/CSS' href='defStyle.css'>
-<style>
-#numOne {padding:2px;border:2.5px solid red;margin:5px;}
-#numTwo {padding:2px;border:2.5px solid blue;margin:5px;}
-#select {padding:2px;border:2.5px solid black;margin:5px;}
-#CalculateMath {padding:2px;margin:5px;border:3px solid green;}
-.MathBtn {padding:2px;margin:5px;border:3px solid green;}
-.Memory {padding:2px;margin:5px;border:3px solid blue;background-color:#FFF;}
-</style>
+	<meta charset='utf-8'>
+	<meta name='viewport' content='width=device-width, initial-scale=1'>
+	<title>Math Calculator</title>
+	<link rel='icon' type='image' href='Images/logo.png'>
+	<link rel='stylesheet' type='text/CSS' href='defStyle.css'>
+	<style>
+		#numOne {padding:2px;border:2.5px solid red;margin:5px;}
+		#numTwo {padding:2px;border:2.5px solid blue;margin:5px;}
+		#select {padding:2px;border:2.5px solid black;margin:5px;}
+		#CalculateMath {padding:2px;margin:5px;border:3px solid green;}
+		.MathBtn {padding:2px;margin:5px;border:3px solid green;}
+		.Memory {padding:2px;margin:5px;border:3px solid blue;background-color:#FFF;}
+	</style>
 </head>
 <body>
-<h1>Math Calculator</h1>
-<br>
-<hr>
-<br>
-<input id='numOne' type='number'>
-	<select id='select'>
-		<option value='p'>Addition(+)</option>
-		<option value='s'>Subtraction(-)</option>
-		<option value='m'>Multiplucation(*)</option>
-		<option value='d'>Division(/)</option>
-		<option value='abs'>Absolute value(|)[Abs]</option>
-		<option value='pow'>Exponent(^)</option>
-		<option value='mod'>Modulus(Mod)[%]</option>
-		<option value='exp'>Exponential</option>
-		<option value='sqrt'>Square root(Sqrt)[√]</option>
-		<option value='cbrt'>Cubic root(cbrt)</option>
-		<option value='sin'>Sine(Sin)</option>
-		<option value='cos'>Cosine(Cos)</option>
-		<option value='tan'>Tangent(Tan)</option>
-		<option value='sinh'>Hyperbolic Sine(Sinh)</option>
-		<option value='cosh'>Hyperbolic Cosine(Cosh)</option>
-		<option value='tanh'>Hyperbolic Tangent(Tanh)</option>
-		<option value='asin'>Arcsine(Asin)</option>
-		<option value='acos'>Arccosine(Acos)</option>
-		<option value='atan'>Arctangent(Atan)</option>
-		<option value='asinh'>Hyperbolic Arcsine(Asinh)</option>
-		<option value='acosh'>Hyperbolic Arccosine(Acosh)</option>
-		<option value='atanh'>Hyperbolic Arctangent(Atanh)</option>
-		<option value='log'>Logistic(Log)</option>
-		<option value='bin'>Binary(Bin)</option>
-		<option value='rnd'>Round</option>
-		<option value='flr'>Floor</option>
-		<option value='ceil'>Ceiling</option>
-		<option value='e'>Euler's number(e)</option>
-		<option value='ea'>Add by Euler's number</option>
-		<option value='es'>Subtract by Euler's number</option>
-		<option value='em'>Multiply by Euler's number</option>
-		<option value='ed'>Divide by Euler's number</option>
-		<option value='nan'>Not a Number? (NaN)</option>
+	<h1>Math Calculator</h1>
+	<br>
+	<hr>
+	<br>
+	<input id='numOne' type='number'>
+		<select id='select'>
+			<option value='p'>Addition(+)</option>
+			<option value='s'>Subtraction(-)</option>
+			<option value='m'>Multiplucation(*)</option>
+			<option value='d'>Division(/)</option>
+			<option value='abs'>Absolute value(|)[Abs]</option>
+			<option value='pow'>Exponent(^)</option>
+			<option value='mod'>Modulus(Mod)[%]</option>
+			<option value='exp'>Exponential</option>
+			<option value='sqrt'>Square root(Sqrt)[√]</option>
+			<option value='cbrt'>Cubic root(cbrt)</option>
+			<option value='sin'>Sine(Sin)</option>
+			<option value='cos'>Cosine(Cos)</option>
+			<option value='tan'>Tangent(Tan)</option>
+			<option value='sinh'>Hyperbolic Sine(Sinh)</option>
+			<option value='cosh'>Hyperbolic Cosine(Cosh)</option>
+			<option value='tanh'>Hyperbolic Tangent(Tanh)</option>
+			<option value='asin'>Arcsine(Asin)</option>
+			<option value='acos'>Arccosine(Acos)</option>
+			<option value='atan'>Arctangent(Atan)</option>
+			<option value='asinh'>Hyperbolic Arcsine(Asinh)</option>
+			<option value='acosh'>Hyperbolic Arccosine(Acosh)</option>
+			<option value='atanh'>Hyperbolic Arctangent(Atanh)</option>
+			<option value='log'>Logistic(Log)</option>
+			<option value='bin'>Binary(Bin)</option>
+			<option value='rnd'>Round</option>
+			<option value='flr'>Floor</option>
+			<option value='ceil'>Ceiling</option>
+			<option value='e'>Euler's number(e)</option>
+			<option value='ea'>Add by Euler's number</option>
+			<option value='es'>Subtract by Euler's number</option>
+			<option value='em'>Multiply by Euler's number</option>
+			<option value='ed'>Divide by Euler's number</option>
+			<option value='nan'>Not a Number? (NaN)</option>
 		</select>
 		<input id='numTwo' type='number'>
 		<p id='ans'></p>
 		<button id='CalculateMath' onclick='math()'>Calculate</button>
 		<h5>Memory</h5>
-			<hr>
-			<button onclick='MemorySave()' class='Memory'>Memory Save (MS)</button>
-			<button onclick='MemoryRecall()' class='Memory'>Memory Recall (MR)</button>
-			<button onclick='MemoryClear()' class='Memory'>Memory Clear (MC)</button>
+		<hr>
+		<button onclick='MemorySave()' class='Memory'>Memory Save (MS)</button>
+		<button onclick='MemoryRecall()' class='Memory'>Memory Recall (MR)</button>
+		<button onclick='MemoryClear()' class='Memory'>Memory Clear (MC)</button>
 		<hr>
 		<h5>Other functions</h5>
-			<hr>
-			<button onclick='Pi()' class='MathBtn'>Pi</button>
-			<p id='piAns'></p>
-			<hr>
-			<button onclick='Rad()' class='MathBtn'>Radian(Rad)</button>
-			<p id='radAns'></p>
-			<hr>
-			<button onclick='Deg()' class='MathBtn'>Degree(Deg)</button>
-			<p id='degAns'></p>
-			<br>
-			<br>
-			<br>
-			<br>
-			<hr>
-	<script src='mathScript.js' async></script>
-	<br>
-	<br>
-	<br>
-	<a href='index.html'>Home</a><br>
-	<a href='bugReport.html'>Report a problem</a>
+		<hr>
+		<button onclick='Pi()' class='MathBtn'>Pi</button>
+		<p id='piAns'></p>
+		<hr>
+		<button onclick='Rad()' class='MathBtn'>Radian(Rad)</button>
+		<p id='radAns'></p>
+		<hr>
+		<button onclick='Deg()' class='MathBtn'>Degree(Deg)</button>
+		<p id='degAns'></p>
+		<br>
+		<br>
+		<br>
+		<br>
+		<hr>
+		<script src='mathScript.js' async></script>
+		<br>
+		<br>
+		<br>
+		<a href='index.html'>Home</a><br>
+		<a href='bugReport.html'>Report a problem</a>
 </body>
 </html>
