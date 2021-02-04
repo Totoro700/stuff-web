@@ -82,11 +82,27 @@ function MemoryClear(){
 	memory = [];
 }
 function Pi(){
-	document.getElementById('piAns').innerText='1 Pi ≈ 3.1415926535897932384626433832795028841971693993751058209749445923\n078164062862089986280348253421170679';
+	var piCont=document.getElementById('piAns').innerText;
+	if (piCont==null || piCont==''){
+		document.getElementById('piAns').innerText='1 Pi ≈ 3.1415926535897932384626433832795028841971693993751058209749445923\n078164062862089986280348253421170679';
+	}else{document.getElementById('piAns').innerText='';}	
 }
 function Rad(){
-	document.getElementById('radAns').innerText='1 Radian ≈ '+57.2958+' Degrees(Deg)';
-}
+	var radCont=document.getElementById('radAns').innerText;
+	if (radCont==null || radCont==''){document.getElementById('radAns').innerText='1 Radian ≈ '+57.2958+' Degrees(Deg)';}else{document.getElementById('radAns').innerText='';}}
 function Deg(){
-	document.getElementById('degAns').innerText='1 Degree ≈ '+0.0174533+' Radians(Rad)';
+	var degCont=document.getElementById('degAns').innerText;
+	if (degCont==null || degCont==''){
+		document.getElementById('degAns').innerText='1 Degree ≈ '+0.0174533+' Radians(Rad)';
+	}else{
+		document.getElementById('degAns').innerText='';
+	}
+}
+function e(){
+	var eCont=document.getElementById('eAns').innerText;
+	if (eCont==null || eCont==''){
+		document.getElementById('eAns').innerText='Euler\'s number ≈ '+Math.E;
+	}else{
+		document.getElementById('eAns').innerText='';
+	}
 }
