@@ -252,8 +252,8 @@ function ShowStats(){
 }
 function showLS(){alert('Info! We use local storage to remember your choices of you background image, background color, and others!');}
 function updateLoadSpeed(){document.getElementById('loadingDiv').style.animation='spin '+document.getElementById('loadSpeed').value+'s linear infinite';}
-function openC(){window.open('https:// stuff-web.xyz/mathCalculator');}
-function openCPopup(){window.open('https:// stuff-web.xyz/mathCalculator', 'popup', 'width=500,height=500');}
+function openC(){window.open('https://stuff-web.xyz/mathCalculator');}
+function openCPopup(){window.open('https://stuff-web.xyz/mathCalculator', 'popup', 'width=500,height=500');}
 function load(){
 	Center();
 	var imgUrl=localStorage.getItem('imgUrl');
